@@ -1,0 +1,8 @@
+Source: dataset/dance/J_Dance2_Salsa/retarget/J_Dance2_Salsa.pkl
+Source FPS: 60.0
+Output FPS: 50.0
+Output frames: 1792
+Motion duration: 35.8333 s
+Joint convention: SONIC IsaacLab 29-DOF
+Quaternion convention: wxyz
+Root data: G1 Moves retarget PKL root, not full-body FK

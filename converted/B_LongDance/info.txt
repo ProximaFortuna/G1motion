@@ -1,0 +1,8 @@
+Source: dataset/dance/B_LongDance/retarget/B_LongDance.pkl
+Source FPS: 60.0
+Output FPS: 50.0
+Output frames: 5972
+Motion duration: 119.4333 s
+Joint convention: SONIC IsaacLab 29-DOF
+Quaternion convention: wxyz
+Root data: G1 Moves retarget PKL root, not full-body FK

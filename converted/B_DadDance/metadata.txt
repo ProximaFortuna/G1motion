@@ -1,0 +1,7 @@
+Metadata for: B_DadDance
+==============================
+
+Body part indexes:
+[0]
+
+Total timesteps: 2091

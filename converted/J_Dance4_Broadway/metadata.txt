@@ -1,0 +1,7 @@
+Metadata for: J_Dance4_Broadway
+==============================
+
+Body part indexes:
+[0]
+
+Total timesteps: 1397
