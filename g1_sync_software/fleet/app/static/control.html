@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Robot Fleet · Control</title>
+<style>
+  :root{--bg:#0f1218;--card:#171c25;--line:#2a3140;--fg:#e6e9ef;--muted:#8b94a7;--ok:#3ddc84;--warn:#f5b84b;--bad:#ff5c6c;--accent:#5aa9ff}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+  header{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;padding:12px 20px;border-bottom:1px solid var(--line)}
+  header h1{font-size:17px;margin:0;font-weight:600}
+  header a{color:var(--muted);font-weight:600;text-decoration:none;padding:8px 12px;border-radius:6px}
+  header a.on{color:var(--fg);background:var(--card);border:1px solid var(--line)}
+  header .meta{color:var(--muted);font-size:12px;margin-left:auto}
+  .dry{display:flex;align-items:center;gap:8px;padding:5px 12px;border-radius:6px;border:1px solid var(--warn);background:#3a2e1c;color:var(--warn);font-weight:600;font-size:13px}
+  .dry i{width:10px;height:10px;border-radius:50%;background:var(--warn)}
+  .dry.live{border-color:var(--bad);background:#3a1c22;color:#ff8a96} .dry.live i{background:var(--bad)}
+  main{max-width:1400px;margin:0 auto;padding:20px;display:flex;flex-direction:column;gap:16px}
+  .cols{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));align-items:start}
+  .tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600;background:var(--line)}
+  .tag.u{background:#1c3a2a;color:var(--ok)} .tag.p{background:#12305a;color:#8cc3ff} .tag.s{background:#3a1c22;color:#ff8a96}
+  .muted{color:var(--muted);font-size:12px}
+  code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
+
+  /* E-stop strip: nothing else lives in here */
+  .estop{border:1px dashed var(--bad);border-radius:10px;padding:20px 16px;margin-bottom:16px;display:flex;flex-direction:column;gap:12px}
+  .estop h2{margin:0;font-size:13px;color:#ff8a96;text-transform:uppercase;letter-spacing:.06em}
+  .estop button{min-height:72px;border-radius:10px;border:0;background:var(--bad);color:#1a0508;font:inherit;font-size:18px;font-weight:800;letter-spacing:.04em;cursor:pointer}
+  .estop button.all{border:2px solid #ffd0d5;font-size:20px}
+
+  .ctl{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:10px;min-width:0}
+  .ctl.both{border-color:var(--accent)}
+  .ctl .head{display:flex;flex-wrap:wrap;align-items:center;gap:8px;min-height:28px}
+  .ctl h2{margin:0;font-size:16px}
+  .dot{width:10px;height:10px;border-radius:50%;background:var(--bad)} .dot.ok{background:var(--ok)}
+  .row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .row.two{display:grid;grid-template-columns:1fr 1fr}
+  .sep{padding-top:10px;border-top:1px solid var(--line)}
+  button.b{min-height:44px;padding:0 12px;border-radius:8px;border:1px solid var(--muted);background:transparent;color:var(--fg);font:inherit;cursor:pointer}
+  button.b.pri{border:0;background:var(--accent);color:#06101f;font-weight:600}
+  button.b.sm{flex:1 1 0;padding:0 6px;font-size:13px;border-color:var(--line)}
+  button.b:disabled{opacity:.4;cursor:default}
+  button.b:active:not(:disabled){filter:brightness(1.3)}
+  select{flex:1 1 0;min-width:0;min-height:44px;padding:0 10px;border-radius:8px;border:1px solid var(--line);background:#10141b;color:var(--fg);font:inherit}
+  .seg{display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  .seg button{min-height:44px;padding:0 12px;border:0;background:transparent;color:var(--fg);font:inherit;cursor:pointer}
+  .seg button+button{border-left:1px solid var(--line)}
+  .seg button[aria-pressed=true]{background:var(--fg);color:var(--bg);font-weight:700}
+  .planner{display:flex;flex-wrap:wrap;gap:10px}
+  .pad{display:grid;grid-template-columns:repeat(3,64px);gap:4px}
+  .pad button,.pm button{min-height:44px;padding:0;border-radius:6px;font-size:12px}
+  .pad button.hold{touch-action:none;user-select:none;-webkit-user-select:none}
+  .pad button.holding{background:var(--accent);color:#06101f;border-color:var(--accent);font-weight:700}
+  .pad button.halt{border-color:var(--warn);color:var(--warn);font-weight:700}
+  .pm{display:flex;flex-direction:column;gap:4px;flex:1 1 120px;min-width:0}
+  .pm div{display:flex;align-items:center;gap:4px;font-size:12px}
+  .pm span{flex:1 1 0} .pm button{width:44px}
+
+  .console{border:1px solid var(--line);border-radius:10px;overflow:hidden;min-width:0}
+  .console .bar{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;padding:8px 12px;background:var(--card);border-bottom:1px solid var(--line);font-size:12px;color:var(--muted)}
+  .console .bar b{color:var(--fg);font-size:13px}
+  .console pre{margin:0;height:240px;overflow:auto;padding:10px 12px;background:#0a0d12;color:#c9d1de;line-height:1.5;white-space:pre-wrap;word-break:break-all}
+  .log{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
+  .log h2{margin:0 0 8px;font-size:14px}
+  .log .scroll{overflow:auto;max-height:260px}
+  table{width:100%;min-width:560px;border-collapse:collapse;font-size:12px}
+  td,th{padding:4px 6px;border-bottom:1px solid var(--line);text-align:left}
+  th{color:var(--muted);font-weight:500}
+  td.dry{color:var(--warn)} td.refused,td.failed{color:#ff8a96} td.sent{color:var(--ok)} td.failed{font-weight:700}
+</style>
+</head>
+<body>
+<header>
+  <h1>Robot Fleet</h1>
+  <span id="conn" class="tag">connecting…</span>
+  <a href="/">Monitor</a>
+  <a href="/control" class="on" aria-current="page">Control</a>
+  <span class="meta" id="meta"></span>
+  <span class="dry" id="modeBadge"><i></i><span id="modeText">Dry run · nothing is sent</span></span>
+</header>
+<main>
+  <section class="estop" aria-label="Emergency stop">
+    <div><h2>Emergency stop</h2><span class="muted" id="estopNote"></span></div>
+    <div class="cols" id="estops"></div>
+  </section>
+  <div class="cols" id="ctls"></div>
+  <div class="cols" id="consoles" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr))"></div>
+  <section class="log">
+    <h2>Command log</h2>
+    <div class="scroll"><table>
+      <thead><tr><th>time</th><th>robot</th><th>command</th><th>command on robot</th><th>result</th></tr></thead>
+      <tbody id="log"></tbody>
+    </table></div>
+  </section>
+</main>
+
+<script>
+const $ = id => document.getElementById(id);
+function esc(x){ return String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function clock(t){ const d=new Date(t*1000); return d.toLocaleTimeString([], {hour12:false})+'.'+String(d.getMilliseconds()).padStart(3,'0'); }
+
+const HOLD = new Set(['forward','backward','veer_left','veer_right','strafe_left','strafe_right','face_left','face_right']);
+const PAD = [['face_left','Face L · Q'],['forward','Fwd · W'],['face_right','Face R · E'],
+             ['veer_left','Veer L · A'],['halt','Halt · R'],['veer_right','Veer R · D'],
+             ['strafe_left','Side L · ,'],['backward','Back · S'],['strafe_right','Side R · .']];
+let built = '';      // robot list + motion list the DOM was built for
+let snap = null;
+
+function controller(title, targets, both){
+  const motions = (snap.control.motions||[]).map(m=>`<option value="${esc(m.id)}">${esc(m.label||m.id)}${m.seconds?` · ${esc(m.seconds)} s`:''}</option>`).join('');
+  return `<section class="ctl ${both?'both':''}" data-targets="${esc(targets.join(','))}" aria-label="Controller for ${esc(title)}">
+    <div class="head">
+      ${both?'':'<span class="dot"></span>'}<h2>${esc(title)}</h2>
+      ${both?'<span class="tag p">simultaneous</span>':''}
+      <span class="badges"></span>
+      <span class="muted side" style="margin-left:auto"></span>
+    </div>
+    <div class="row two">
+      <button class="b" data-cmd="initialize">Initialize</button>
+      <button class="b pri" data-cmd="policy">Policy · ]</button>
+    </div>
+    <div class="row">
+      <select aria-label="Motion">${motions||'<option value="">no motions configured</option>'}</select>
+      <button class="b pri" data-cmd="play">Play · T</button>
+      <button class="b" data-cmd="restart">Restart · R</button>
+    </div>
+    <div class="muted last" style="min-height:18px"></div>
+    <div class="row sep">
+      <div class="seg" role="group" aria-label="Control mode">
+        <button data-cmd="mode" data-arg="normal" aria-pressed="false">Normal</button>
+        <button data-cmd="mode" data-arg="planner" aria-pressed="false">Planner</button>
+      </div>
+      <button class="b sm n" data-cmd="turn_left">Turn L · Q</button>
+      <button class="b sm" data-cmd="reset_heading">Reset · I</button>
+      <button class="b sm n" data-cmd="turn_right">Turn R · E</button>
+    </div>
+    <div class="planner">
+      <div class="pad">${PAD.map(([c,l])=>`<button class="b pl ${c==='halt'?'halt':''} ${HOLD.has(c)?'hold':''}" data-cmd="${c}">${l}</button>`).join('')}</div>
+      <div class="pm">
+        <div><span>Speed</span><button class="b pl" data-cmd="slower" aria-label="Slower, 9">−</button><button class="b pl" data-cmd="faster" aria-label="Faster, 0">+</button></div>
+        <div><span>Height</span><button class="b pl" data-cmd="lower" aria-label="Lower, minus">−</button><button class="b pl" data-cmd="higher" aria-label="Higher, equals">+</button></div>
+        <div class="muted">Planner mode only. Hold a direction to keep moving.</div>
+      </div>
+    </div>
+  </section>`;
+}
+
+function build(){
+  const names = snap.robots.map(r=>r.name);
+  $('estops').innerHTML =
+    `<button class="all" data-cmd="estop" data-targets="${esc(names.join(','))}">E-STOP BOTH</button>` +
+    names.map(n=>`<button data-cmd="estop" data-targets="${esc(n)}">E-STOP ${esc(n)}</button>`).join('');
+  $('ctls').innerHTML = controller('Both', names, true) + names.map(n=>controller(n,[n],false)).join('');
+  $('consoles').innerHTML = names.map(n=>`<section class="console" data-robot="${esc(n)}" aria-label="${esc(n)} console">
+      <div class="bar"><b>${esc(n)}</b><span>tmux · ${esc(snap.control.session)}</span><span class="info"></span><span class="tag live" style="margin-left:auto"></span></div>
+      <pre></pre></section>`).join('');
+}
+
+function stateTag(s){ const c = s==='policy'?'p':s==='stopped'?'s':s==='running'?'u':''; return `<span class="tag ${c}">${esc(String(s).toUpperCase())}</span>`; }
+
+function update(){
+  const cs = snap.control.robots, byName = Object.fromEntries(snap.robots.map(r=>[r.name,r]));
+  for(const el of document.querySelectorAll('.ctl')){
+    const t = el.dataset.targets.split(',').filter(Boolean);
+    const modes = [...new Set(t.map(n=>cs[n]?.mode))];
+    const mode = modes.length===1 ? modes[0] : null;      // null = robots disagree
+    el.querySelectorAll('.seg button').forEach(b=>b.setAttribute('aria-pressed', String(b.dataset.arg===mode)));
+    el.querySelectorAll('.pl').forEach(b=>b.disabled = mode!=='planner');
+    el.querySelectorAll('.n').forEach(b=>b.disabled = mode!=='normal');
+    el.querySelector('.planner').style.opacity = mode==='planner' ? 1 : .5;
+    if(t.length===1){
+      const n=t[0], r=byName[n]||{}, c=cs[n]||{};
+      el.querySelector('.dot').className = 'dot'+(r.ssh_ok?' ok':'');
+      el.querySelector('.badges').innerHTML = stateTag(c.state)+` <span class="tag">${esc(c.mode)}</span>`;
+      el.querySelector('.side').textContent = r.host||'';
+      el.querySelector('.last').textContent = c.last ? `Last: ${c.last.label} at ${clock(c.last.time)} · ${c.last.result}` : 'No command yet';
+    } else {
+      el.querySelector('.side').textContent = t.join(' + ');
+      el.querySelector('.last').textContent = mode ? 'The same command goes to every robot.' : 'Robots are in different modes; movement keys are off.';
+    }
+  }
+  for(const el of document.querySelectorAll('.console')){
+    const n=el.dataset.robot, r=byName[n]||{}, p=cs[n]?.pane, pre=el.querySelector('pre'), live=el.querySelector('.live');
+    el.querySelector('.info').textContent = r.clock?.fleet_source ? `clock ${r.clock.fleet_source.offset_ms} ms` : '';
+    const atBottom = pre.scrollTop+pre.clientHeight >= pre.scrollHeight-4;
+    if(p?.ok){ pre.textContent = p.text||'(empty pane)'; live.textContent=`live · ${snap.control.pane_interval_s} s`; live.className='tag live u'; }
+    else { pre.textContent = p ? `No console: ${p.error}` : (r.ssh_ok ? 'Waiting for first capture…' : 'Robot offline.'); live.textContent='no session'; live.className='tag live'; }
+    if(atBottom) pre.scrollTop = pre.scrollHeight;
+  }
+  $('log').innerHTML = (snap.control.log||[]).map(e=>`<tr><td>${clock(e.time)}</td><td>${esc(e.robot)}${e.group?' <span class="tag">both</span>':''}</td>
+    <td>${esc(e.command)}</td><td><code>${esc(e.would||'–')}</code></td><td class="${esc(e.kind)}">${esc(e.result)}</td></tr>`).join('')
+    || '<tr><td colspan="5" class="muted">No commands yet.</td></tr>';
+}
+
+function apply(s){
+  snap = s;
+  if(!s.control) return;
+  const ts = s.time_server||{};
+  $('meta').textContent = `${s.robots.filter(r=>r.ssh_ok).length}/${s.robots.length} online · time server ${ts.ok?'ok':'DOWN'} · ${new Date(s.time*1000).toLocaleTimeString()}`;
+  const key = JSON.stringify([s.robots.map(r=>r.name), s.control.motions, s.control.session]);
+  if(key!==built){ build(); built=key; }
+  const dry = s.control.dry_run;
+  $('modeBadge').className = 'dry'+(dry?'':' live');
+  $('modeText').textContent = dry ? 'Dry run · nothing is sent' : 'LIVE · commands are sent to the robots';
+  $('estopNote').textContent = dry
+    ? 'Dry run: these do NOT stop a robot. Use the physical e-stop.'
+    : 'Sends O: stops control and exits SONIC. Software stop over Wi-Fi, not a safety stop. Keep the physical e-stop in reach.';
+  update();
+}
+
+document.addEventListener('click', async ev=>{
+  const b = ev.target.closest('button[data-cmd]');
+  if(!b || b.disabled || HOLD.has(b.dataset.cmd)) return;   // hold buttons use press/release below
+  const holder = b.closest('[data-targets]');
+  const body = {command:b.dataset.cmd, targets:holder.dataset.targets.split(',').filter(Boolean)};
+  if(b.dataset.arg) body.arg = b.dataset.arg;
+  if(b.dataset.cmd==='play') body.arg = holder.querySelector('select')?.value || '';
+  try{
+    const r = await fetch('/api/command',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+    if(!r.ok) console.error('command failed', r.status);
+  }catch(e){ console.error(e); }
+});
+
+// Hold-to-move: repeat the key on the server while the button is held.
+let ws = null, held = null, pinger = null;
+function wsSend(o){ if(ws && ws.readyState===1) ws.send(JSON.stringify(o)); }
+function release(){
+  if(!held) return;
+  held.classList.remove('holding'); held = null;
+  clearInterval(pinger); pinger = null;
+  wsSend({type:'release'});
+}
+document.addEventListener('pointerdown', ev=>{
+  const b = ev.target.closest('button.hold');
+  if(!b || b.disabled || ev.button>0) return;
+  release();
+  held = b; b.classList.add('holding');
+  try{ b.setPointerCapture(ev.pointerId); }catch(e){}
+  const targets = b.closest('[data-targets]').dataset.targets.split(',').filter(Boolean);
+  wsSend({type:'hold', command:b.dataset.cmd, targets});
+  pinger = setInterval(()=>wsSend({type:'ping'}), 100);
+});
+for(const t of ['pointerup','pointercancel','lostpointercapture','contextmenu']) document.addEventListener(t, release);
+window.addEventListener('blur', release);
+document.addEventListener('visibilitychange', ()=>{ if(document.hidden) release(); });
+
+function connect(){
+  ws = new WebSocket((location.protocol==='https:'?'wss':'ws')+'://'+location.host+'/ws');
+  ws.onopen = ()=>{ $('conn').textContent='live'; $('conn').className='tag u'; };
+  ws.onmessage = e => apply(JSON.parse(e.data));
+  ws.onclose = ()=>{ release(); $('conn').textContent='disconnected, retrying'; $('conn').className='tag'; setTimeout(connect,2000); };
+}
+connect();
+</script>
+</body>
+</html>
