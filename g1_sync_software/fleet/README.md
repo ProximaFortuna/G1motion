@@ -94,7 +94,11 @@ command log.
   line into the `sonic_demo` tmux session, and every other button types one
   SONIC key into it with `tmux send-keys`. "Both" sends to all robots at once.
 
-In Planner mode the direction buttons are hold-to-move: the key repeats
+SONIC's planner starts idle and ignores the direction keys until a gait is
+chosen, so press **Slow · 1** or **Walk · 2** first.
+
+In Planner mode the direction buttons are hold-to-move (set
+`control.hold_to_move: false` to fall back to one key per click): the key repeats
 `control.hold_hz` times a second while the button is held, and stops on
 release, when the tab loses focus, or 0.4 s after the browser stops answering.
 

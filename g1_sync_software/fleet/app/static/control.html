@@ -138,9 +138,10 @@ function controller(title, targets, both){
     <div class="planner">
       <div class="pad">${PAD.map(([c,l])=>`<button class="b pl ${c==='halt'?'halt':''} ${HOLD.has(c)?'hold':''}" data-cmd="${c}">${l}</button>`).join('')}</div>
       <div class="pm">
+        <div><span>Gait</span><button class="b pl" style="width:auto;padding:0 8px" data-cmd="slow_walk">Slow · 1</button><button class="b pl" style="width:auto;padding:0 8px" data-cmd="walk">Walk · 2</button></div>
         <div><span>Speed</span><button class="b pl" data-cmd="slower" aria-label="Slower, 9">−</button><button class="b pl" data-cmd="faster" aria-label="Faster, 0">+</button></div>
         <div><span>Height</span><button class="b pl" data-cmd="lower" aria-label="Lower, minus">−</button><button class="b pl" data-cmd="higher" aria-label="Higher, equals">+</button></div>
-        <div class="muted">Planner mode only. Hold a direction to keep moving.</div>
+        <div class="muted holdhint"></div>
       </div>
     </div>
   </section>`;
@@ -169,6 +170,7 @@ function update(){
     el.querySelectorAll('.pl').forEach(b=>b.disabled = mode!=='planner');
     el.querySelectorAll('.n').forEach(b=>b.disabled = mode!=='normal');
     el.querySelector('.planner').style.opacity = mode==='planner' ? 1 : .5;
+    el.querySelector('.holdhint').textContent = 'Planner mode only. ' + (snap.control.hold_to_move ? 'Pick a gait first, then hold a direction.' : 'Pick a gait first. One click = one key press.');
     if(t.length===1){
       const n=t[0], r=byName[n]||{}, c=cs[n]||{};
       el.querySelector('.dot').className = 'dot'+(r.ssh_ok?' ok':'');
@@ -211,7 +213,7 @@ function apply(s){
 
 document.addEventListener('click', async ev=>{
   const b = ev.target.closest('button[data-cmd]');
-  if(!b || b.disabled || HOLD.has(b.dataset.cmd)) return;   // hold buttons use press/release below
+  if(!b || b.disabled || (holdOn() && HOLD.has(b.dataset.cmd))) return;   // hold buttons use press/release below
   const holder = b.closest('[data-targets]');
   const body = {command:b.dataset.cmd, targets:holder.dataset.targets.split(',').filter(Boolean)};
   if(b.dataset.arg) body.arg = b.dataset.arg;
@@ -224,6 +226,7 @@ document.addEventListener('click', async ev=>{
 
 // Hold-to-move: repeat the key on the server while the button is held.
 let ws = null, held = null, pinger = null;
+function holdOn(){ return !!(snap && snap.control && snap.control.hold_to_move); }   // control.hold_to_move in robots.yaml
 function wsSend(o){ if(ws && ws.readyState===1) ws.send(JSON.stringify(o)); }
 function release(){
   if(!held) return;
@@ -233,7 +236,7 @@ function release(){
 }
 document.addEventListener('pointerdown', ev=>{
   const b = ev.target.closest('button.hold');
-  if(!b || b.disabled || ev.button>0) return;
+  if(!b || b.disabled || ev.button>0 || !holdOn()) return;
   release();
   held = b; b.classList.add('holding');
   try{ b.setPointerCapture(ev.pointerId); }catch(e){}
