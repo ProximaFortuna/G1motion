@@ -10,7 +10,7 @@ robots:
   - name: g1-01
     host: 192.168.0.8
     user: unitree
-    key: /keys/id_rsa
+    key: ~/.ssh/id_rsa
     role: G1 (SONIC on-board)
     # What Initialize types into the tmux session (after cd to control.sonic_dir).
     launch: >-
@@ -22,7 +22,7 @@ robots:
   - name: g1-02
     host: 192.168.0.42
     user: unitree
-    key: /keys/id_rsa
+    key: ~/.ssh/id_rsa
     role: G1 (Ubuntu 20.04)
     # LD_PRELOAD: this robot's system libcudla.so.1 lacks cudlaDeviceGetCount, which
     # ~/TensorRT needs; the CUDA 12.6 copy has it. Applies to this process only.
