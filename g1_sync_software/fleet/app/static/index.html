@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Robot Fleet</title>
+<style>
+  :root{--bg:#0f1218;--card:#171c25;--line:#2a3140;--fg:#e6e9ef;--muted:#8b94a7;--ok:#3ddc84;--warn:#f5b84b;--bad:#ff5c6c;--accent:#5aa9ff}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+  header{display:flex;align-items:center;gap:16px;padding:14px 20px;border-bottom:1px solid var(--line)}
+  header h1{font-size:17px;margin:0;font-weight:600}
+  header .meta{color:var(--muted);font-size:12px;margin-left:auto}
+  button{background:var(--accent);color:#06101f;border:0;border-radius:6px;padding:7px 12px;font-weight:600;cursor:pointer}
+  button:disabled{opacity:.5;cursor:default}
+  main{padding:20px;display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(360px,1fr))}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px}
+  .card h2{margin:0 0 4px;font-size:16px;display:flex;align-items:center;gap:8px}
+  .dot{width:10px;height:10px;border-radius:50%;background:var(--bad);flex:none}
+  .dot.ok{background:var(--ok)} .dot.warn{background:var(--warn)}
+  .role{color:var(--muted);font-size:12px;margin-bottom:12px}
+  dl{display:grid;grid-template-columns:110px 1fr;gap:4px 10px;margin:0;font-size:13px}
+  dt{color:var(--muted)} dd{margin:0;word-break:break-all}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
+  .err{color:var(--bad);font-size:12px;margin-top:8px}
+  table{width:100%;border-collapse:collapse;font-size:12px;margin-top:8px}
+  td,th{padding:4px 6px;border-bottom:1px solid var(--line);text-align:left}
+  th{color:var(--muted);font-weight:500}
+  section.scan{grid-column:1/-1}
+  .tag{display:inline-block;padding:1px 6px;border-radius:4px;font-size:11px;background:#223}
+  .tag.u{background:#1c3a2a;color:var(--ok)}
+  .banner{grid-column:1/-1;padding:10px 14px;border:1px dashed var(--line);border-radius:8px;color:var(--muted);font-size:12px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Robot Fleet</h1>
+  <span id="conn" class="tag">connecting…</span>
+  <a href="/control" style="color:var(--accent);font-weight:600;text-decoration:none">Control</a>
+  <button id="scanBtn" onclick="startScan()">Scan network</button>
+  <span class="meta" id="meta"></span>
+</header>
+<main id="main">
+  <div class="banner">Monitor only. This page issues read-only inspection commands over SSH (hostname, uptime, ip addr, serial). No motion or controller commands are sent.</div>
+</main>
+
+<script>
+const main = document.getElementById('main');
+const meta = document.getElementById('meta');
+const conn = document.getElementById('conn');
+const scanBtn = document.getElementById('scanBtn');
+let cards = {};
+let scanEl = null;
+
+function fmtUptime(s){ if(s==null) return '–'; s=Math.floor(s); const d=Math.floor(s/86400), h=Math.floor(s%86400/3600), m=Math.floor(s%3600/60); return (d?d+'d ':'')+h+'h '+m+'m'; }
+function ago(t){ if(!t) return 'never'; const s=Math.round(Date.now()/1000-t); return s<2?'just now':s+'s ago'; }
+function esc(x){ return String(x??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+
+function renderClock(c){
+  if(!c) return '<span class="tag">chrony not found</span>';
+  const fs = c.fleet_source;
+  const st = c.synced_to_fleet ? '<span class="tag u">synced to fleet PC</span>'
+           : fs ? `<span class="tag" style="background:#3a2e1c;color:var(--warn)">fleet PC seen, state '${esc(fs.state)}'</span>`
+                : '<span class="tag" style="background:#3a1c22;color:var(--bad)">not using fleet PC</span>';
+  const off = fs ? ` offset to PC ${fs.offset_ms} ms ±${fs.err_ms}` : '';
+  return `${st} <code>${esc(c.ref)}</code> stratum ${c.stratum}, sys offset ${c.offset_ms} ms${off}`;
+}
+function renderRobot(r){
+  const status = r.ssh_ok ? 'ok' : (r.reachable ? 'warn' : '');
+  const label = r.ssh_ok ? 'online' : (r.reachable ? 'reachable, ssh failed' : 'offline');
+  const ifaces = (r.interfaces||[]).filter(i=>i.ip||/^(en|wl|eth)/.test(i.name))
+    .map(i=>`<tr><td><code>${esc(i.name)}</code></td><td><code>${esc(i.ip||'–')}</code></td><td><code>${esc(i.mac)}</code></td></tr>`).join('');
+  return `
+    <h2><span class="dot ${status}"></span>${esc(r.name)} <span class="tag">${label}</span></h2>
+    <div class="role">${esc(r.role||'')}</div>
+    <dl>
+      <dt>Robot ID</dt><dd><code>${esc(r.robot_id||'–')}</code></dd>
+      <dt>Hostname</dt><dd>${esc(r.hostname||'–')}</dd>
+      <dt>Address</dt><dd><code>${esc(r.user)}@${esc(r.host)}</code> ${r.latency_ms!=null?`<span class="tag">${r.latency_ms} ms</span>`:''}</dd>
+      <dt>Model</dt><dd>${esc(r.model||'–')}</dd>
+      <dt>OS</dt><dd>${esc(r.os||'–')} <span style="color:var(--muted)">${esc(r.kernel||'')}</span></dd>
+      <dt>Uptime</dt><dd>${fmtUptime(r.uptime_s)}</dd>
+      <dt>Load</dt><dd>${esc(r.load||'–')}</dd>
+      <dt>Memory</dt><dd>${r.mem_total_mb?`${r.mem_avail_mb} MB free / ${r.mem_total_mb} MB`:'–'}</dd>
+      <dt>Containers</dt><dd>${(r.docker_containers||[]).length? r.docker_containers.map(c=>`<span class="tag">${esc(c)}</span>`).join(' '):'none'}</dd>
+      <dt>Clock</dt><dd>${renderClock(r.clock)}</dd>
+      <dt>Last seen</dt><dd>${ago(r.last_seen)}</dd>
+    </dl>
+    ${ifaces?`<table><tr><th>iface</th><th>ip</th><th>mac</th></tr>${ifaces}</table>`:''}
+    ${r.error?`<div class="err">${esc(r.error)}</div>`:''}`;
+}
+
+function renderScan(s){
+  scanBtn.disabled = !!s.running;
+  scanBtn.textContent = s.running ? 'Scanning…' : 'Scan network';
+  if(!s.finished_at && !s.running) return '';
+  const rows = (s.results||[]).sort((a,b)=>a.host.localeCompare(b.host,undefined,{numeric:true}))
+    .map(r=>`<tr><td><code>${esc(r.host)}</code></td><td>${esc(r.hostname||'–')}</td><td><code>${esc(r.serial||'–')}</code></td>
+      <td>${r.is_unitree?'<span class="tag u">unitree</span>':''} ${r.known?'<span class="tag">in robots.yaml</span>':''} ${r.ssh_ok?'':'<span class="tag">ssh '+esc(r.error||'failed')+'</span>'}</td>
+      <td>${r.latency_ms} ms</td></tr>`).join('');
+  return `<h2>Network scan <span class="tag">${esc(s.subnet||'')}</span> ${s.running?'<span class="tag">running</span>':''}</h2>
+    ${s.error?`<div class="err">${esc(s.error)}</div>`:''}
+    <table><tr><th>host</th><th>hostname</th><th>serial</th><th></th><th>rtt</th></tr>${rows||'<tr><td colspan=5>no hosts with port 22 found</td></tr>'}</table>`;
+}
+
+function apply(snap){
+  const ts = snap.time_server||{};
+  const tsTxt = ts.ok ? `time server ${esc(snap.timesync?.pc_ip||ts.host)} stratum ${ts.stratum}` : `time server DOWN (${esc(ts.error||'')})`;
+  meta.textContent = `${snap.robots.filter(r=>r.ssh_ok).length}/${snap.robots.length} online · ${tsTxt} · poll ${snap.poll_interval_s}s · ${new Date(snap.time*1000).toLocaleTimeString()}`;
+  const seen = new Set();
+  for(const r of snap.robots){
+    seen.add(r.name);
+    let el = cards[r.name];
+    if(!el){ el = document.createElement('div'); el.className='card'; main.appendChild(el); cards[r.name]=el; }
+    el.innerHTML = renderRobot(r);
+  }
+  for(const n of Object.keys(cards)) if(!seen.has(n)){ cards[n].remove(); delete cards[n]; }
+  const sh = renderScan(snap.scan||{});
+  if(sh){ if(!scanEl){ scanEl=document.createElement('section'); scanEl.className='card scan'; main.appendChild(scanEl);} scanEl.innerHTML=sh; }
+}
+
+async function startScan(){ await fetch('/api/scan',{method:'POST'}); }
+
+function connect(){
+  const ws = new WebSocket((location.protocol==='https:'?'wss':'ws')+'://'+location.host+'/ws');
+  ws.onopen = ()=>{ conn.textContent='live'; conn.className='tag u'; };
+  ws.onmessage = e => apply(JSON.parse(e.data));
+  ws.onclose = ()=>{ conn.textContent='disconnected, retrying'; conn.className='tag'; setTimeout(connect,2000); };
+}
+connect();
+</script>
+</body>
+</html>

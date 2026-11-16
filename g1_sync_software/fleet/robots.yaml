@@ -1,0 +1,69 @@
+# Known robots. Each entry is probed over SSH with READ-ONLY commands only
+# (hostname, uptime, ip addr, serial). Nothing here moves the robot.
+#
+# host     : IP or hostname reachable from this PC (Wi-Fi/router side)
+# user     : SSH login user on the on-board PC
+# key      : path *inside the container* to the private key (see docker-compose.yml)
+# role     : free text shown in the UI
+
+robots:
+  - name: g1-01
+    host: 192.168.0.8
+    user: unitree
+    key: /keys/id_rsa
+    role: G1 (SONIC on-board)
+    # What Initialize types into the tmux session (after cd to control.sonic_dir).
+    launch: >-
+      ./target/release/g1_deploy_onnx_ref enP8p1s0 policy/release/model_decoder.onnx
+      reference/sync_macarena --obs-config policy/release/observation_config.yaml
+      --encoder-file policy/release/model_encoder.onnx
+      --planner-file planner/target_vel/V2/planner_sonic.onnx
+      --input-type keyboard --output-type all
+  - name: g1-02
+    host: 192.168.0.42
+    user: unitree
+    key: /keys/id_rsa
+    role: G1 (Ubuntu 20.04)
+    # LD_PRELOAD: this robot's system libcudla.so.1 lacks cudlaDeviceGetCount, which
+    # ~/TensorRT needs; the CUDA 12.6 copy has it. Applies to this process only.
+    launch: >-
+      LD_PRELOAD=/usr/local/cuda-12.6/targets/aarch64-linux/lib/libcudla.so.1
+      ./target/release/g1_deploy_onnx_ref enP8p1s0 policy/release/model_decoder.onnx
+      reference/lugan_preflight --obs-config policy/release/observation_config.yaml
+      --encoder-file policy/release/model_encoder.onnx
+      --planner-file planner/target_vel/V2/planner_sonic.onnx
+      --input-type keyboard --output-type all --zmq-host localhost
+
+# Control tab (http://localhost:8080/control).
+#   dry_run: true   buttons only log the command that would be sent
+#   dry_run: false  LIVE: Initialize starts SONIC in tmux on the robot, and the
+#                   other buttons type SONIC keys into it. Robots can move.
+# Hot-reloaded: a change here takes effect within one poll, no restart.
+control:
+  dry_run: false
+  hold_hz: 10                         # key repeats per second while a move button is held
+  pane_interval_s: 1                  # how often the SONIC console is re-read
+  process: g1_deploy_onnx_ref         # SONIC process name, used to tell if it is running
+  session: sonic_demo                 # tmux session name on each robot
+  sonic_dir: ~/sonic-residual-c374bae/gear_sonic_deploy
+  capture_panes: true                 # false = do not read tmux panes either
+  motions:
+    - id: macarena_001__A545
+      label: Macarena
+      seconds: 27.5
+
+# Optional network discovery: TCP-probe port 22 across this subnet when
+# "Scan network" is pressed in the UI, then try SSH with scan_user/scan_key
+# to identify hosts whose hostname starts with "unitree".
+discovery:
+  subnet: 192.168.0.0/24
+  scan_user: unitree
+  scan_key: /keys/id_rsa
+
+poll_interval_s: 5
+
+# Fleet time server (the chrony container in docker-compose.yml, reachable on
+# this PC's LAN IP). Robots are pointed at it with timesync/install-robot.sh.
+timesync:
+  pc_ip: 192.168.0.58     # this PC's address on the robot Wi-Fi/router network
+  ntp_host: chrony        # compose service name, used for the dashboard health check

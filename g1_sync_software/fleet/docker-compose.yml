@@ -1,0 +1,21 @@
+services:
+  fleet:
+    build: .
+    container_name: robot-fleet
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./robots.yaml:/config/robots.yaml:ro
+      # SSH private key used to log into the robots' on-board PCs (read-only mount).
+      # Override with SSH_KEY=/path/to/key docker compose up
+      - ${SSH_KEY:-~/.ssh/id_rsa}:/keys/id_rsa:ro
+    restart: unless-stopped
+
+  chrony:
+    build: ./timesync
+    container_name: robot-fleet-chrony
+    ports:
+      - "123:123/udp"
+    cap_add:
+      - SYS_TIME          # lets chronyd discipline this host/VM clock from upstream NTP
+    restart: unless-stopped
