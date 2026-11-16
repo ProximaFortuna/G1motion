@@ -41,6 +41,7 @@ robots:
 # Hot-reloaded: a change here takes effect within one poll, no restart.
 control:
   dry_run: false
+  hold_to_move: true                  # false = fall back to one key per click (old behaviour)
   hold_hz: 10                         # key repeats per second while a move button is held
   pane_interval_s: 1                  # how often the SONIC console is re-read
   process: g1_deploy_onnx_ref         # SONIC process name, used to tell if it is running

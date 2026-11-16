@@ -44,6 +44,11 @@ KEYS: dict[str, tuple[str, str | None, str]] = {
     "face_left":     ("Q", "planner", "Face left"),
     "face_right":    ("E", "planner", "Face right"),
     "halt":          ("R", "planner", "Halt"),
+    # SONIC's planner starts in IDLE, where W/S/A/D are ignored. A gait has to
+    # be chosen first: in the standing motion set, 1 = slow walk and 2 = walk
+    # (3 = run and 4 = forward jump are deliberately not offered here).
+    "slow_walk":     ("1", "planner", "Gait slow walk"),
+    "walk":          ("2", "planner", "Gait walk"),
     "slower":        ("9", "planner", "Slower"),
     "faster":        ("0", "planner", "Faster"),
     "lower":         ("-", "planner", "Lower"),
@@ -84,6 +89,9 @@ class Control:
 
     def dry_run(self, config: dict) -> bool:
         return self.cfg(config).get("dry_run", True) is not False
+
+    def hold_enabled(self, config: dict) -> bool:
+        return self.cfg(config).get("hold_to_move", True) is not False
 
     def session(self, config: dict) -> str:
         return str(self.cfg(config).get("session", "sonic_demo"))
@@ -246,7 +254,7 @@ class Control:
         """
         cmd = str(body.get("command", ""))
         targets = [t for t in (body.get("targets") or []) if t in robots]
-        if cmd not in HOLDABLE or not targets:
+        if cmd not in HOLDABLE or not targets or not self.hold_enabled(config):
             return
         dry = self.dry_run(config)
         period = 1.0 / max(1.0, min(30.0, float(self.cfg(config).get("hold_hz", 10))))
@@ -343,6 +351,7 @@ class Control:
     def snapshot(self, config: dict, robots: list[str]) -> dict[str, Any]:
         return {
             "dry_run": self.dry_run(config),
+            "hold_to_move": self.hold_enabled(config),
             "session": self.session(config),
             "pane_interval_s": float(self.cfg(config).get("pane_interval_s", 1)),
             "motions": self.cfg(config).get("motions") or [],
