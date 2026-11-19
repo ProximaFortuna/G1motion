@@ -1,4 +1,34 @@
 number,directory,clip,duration_s,frames,fps,padded,hardware_test_status,license
+0,000__macarena_001__A545,macarena_001__A545,27.48,1375,50,False,"previously tested baseline, per user",Upstream SONIC sample; private research baseline
+1,001__230124__egypt_dance_R_002__A140,230124/egypt_dance_R_002__A140.csv,4.58,230,50,False,not_tested,BONES-SEED Dataset License Agreement
+2,002__230411__dance_basic_fourth_entry_position_R_002__A308_M,230411/dance_basic_fourth_entry_position_R_002__A308_M.csv,5.04,253,50,False,not_tested,BONES-SEED Dataset License Agreement
+3,003__230411__dance_basic_head_accent_R_fast_001__A308,230411/dance_basic_head_accent_R_fast_001__A308.csv,2.7,136,50,False,not_tested,BONES-SEED Dataset License Agreement
+4,004__230411__dance_retro_clap_step_R_003__A310,230411/dance_retro_clap_step_R_003__A310.csv,6.26,314,50,False,not_tested,BONES-SEED Dataset License Agreement
+5,005__230411__dance_retro_clap_step_variation_R_002__A306,230411/dance_retro_clap_step_variation_R_002__A306.csv,5.28,265,50,False,not_tested,BONES-SEED Dataset License Agreement
+6,006__230411__dance_retro_disco_finger_down_up_R_002__A306_M,230411/dance_retro_disco_finger_down_up_R_002__A306_M.csv,3.26,164,50,False,not_tested,BONES-SEED Dataset License Agreement
+7,007__230411__dance_retro_disco_finger_horizontal_R_002__A307,230411/dance_retro_disco_finger_horizontal_R_002__A307.csv,7.04,353,50,False,not_tested,BONES-SEED Dataset License Agreement
+8,008__230411__victory_dance_brick_brick_slide_slide_R_002__A308,230411/victory_dance_brick_brick_slide_slide_R_002__A308.csv,5.12,257,50,False,not_tested,BONES-SEED Dataset License Agreement
+9,009__230411__victory_dance_robot_dance_180_R_003__A306,230411/victory_dance_robot_dance_180_R_003__A306.csv,12.76,639,50,False,not_tested,BONES-SEED Dataset License Agreement
+10,010__230411__victory_dance_robot_dance_180_R_003__A310_M,230411/victory_dance_robot_dance_180_R_003__A310_M.csv,8.64,433,50,False,not_tested,BONES-SEED Dataset License Agreement
+11,011__230411__dance_retro_charleston_jump_R_001__A309_M,230411/dance_retro_charleston_jump_R_001__A309_M.csv,2.88,145,50,False,not_tested,BONES-SEED Dataset License Agreement
+12,012__230411__dance_basic_padeburee_R_fast_002__A307,230411/dance_basic_padeburee_R_fast_002__A307.csv,6.54,328,50,False,not_tested,BONES-SEED Dataset License Agreement
+13,013__230411__victory_dance_orange_justice_180_R_001__A309,230411/victory_dance_orange_justice_180_R_001__A309.csv,7.72,387,50,False,not_tested,BONES-SEED Dataset License Agreement
+14,014__230411__victory_dance_ymca_R_002__A308,230411/victory_dance_ymca_R_002__A308.csv,9.0,451,50,False,not_tested,BONES-SEED Dataset License Agreement
+15,015__230412__dance_hiphop_flintstones_kick_ball_change_R_003__A312,230412/dance_hiphop_flintstones_kick_ball_change_R_003__A312.csv,9.24,463,50,False,not_tested,BONES-SEED Dataset License Agreement
+16,016__230412__dance_hiphop_2_step_270_R_002__A311,230412/dance_hiphop_2_step_270_R_002__A311.csv,7.68,385,50,False,not_tested,BONES-SEED Dataset License Agreement
+17,017__230412__dance_hiphop_2_step_270_R_003__A311,230412/dance_hiphop_2_step_270_R_003__A311.csv,7.08,355,50,False,not_tested,BONES-SEED Dataset License Agreement
+18,018__230412__dance_hiphop_alt_stump_R_003__A313,230412/dance_hiphop_alt_stump_R_003__A313.csv,6.0,301,50,False,not_tested,BONES-SEED Dataset License Agreement
+19,019__230412__dance_hiphop_bart_simpson_R_001__A311_M,230412/dance_hiphop_bart_simpson_R_001__A311_M.csv,10.26,514,50,False,not_tested,BONES-SEED Dataset License Agreement
+20,020__230412__dance_hiphop_bounce_180_R_002__A313,230412/dance_hiphop_bounce_180_R_002__A313.csv,7.3,366,50,False,not_tested,BONES-SEED Dataset License Agreement
+21,021__230412__dance_hiphop_bounce_to_feed_R_002__A314_M,230412/dance_hiphop_bounce_to_feed_R_002__A314_M.csv,3.22,162,50,False,not_tested,BONES-SEED Dataset License Agreement
+22,022__230412__dance_hiphop_cabath_path_R_001__A312,230412/dance_hiphop_cabath_path_R_001__A312.csv,10.6,531,50,False,not_tested,BONES-SEED Dataset License Agreement
+23,023__230412__dance_hiphop_happy_feet_R_001__A313_M,230412/dance_hiphop_happy_feet_R_001__A313_M.csv,5.54,278,50,False,not_tested,BONES-SEED Dataset License Agreement
+24,024__230412__dance_hiphop_kick_it_variation_R_002__A315_M,230412/dance_hiphop_kick_it_variation_R_002__A315_M.csv,9.4,471,50,False,not_tested,BONES-SEED Dataset License Agreement
+25,025__230412__dance_hiphop_kid_n_play_R_001__A312_M,230412/dance_hiphop_kid_n_play_R_001__A312_M.csv,11.0,551,50,False,not_tested,BONES-SEED Dataset License Agreement
+26,026__230412__dance_latino_chase_mambo_R_fast_001__A314,230412/dance_latino_chase_mambo_R_fast_001__A314.csv,8.44,423,50,False,not_tested,BONES-SEED Dataset License Agreement
+27,027__230412__dance_latino_mambo_180_mambo_360_R_001__A313,230412/dance_latino_mambo_180_mambo_360_R_001__A313.csv,9.28,465,50,False,not_tested,BONES-SEED Dataset License Agreement
+28,028__230412__dance_hiphop_floss_R_002__A312_M,230412/dance_hiphop_floss_R_002__A312_M.csv,7.58,380,50,False,not_tested,BONES-SEED Dataset License Agreement
+29,029__240327__moonwalk_R_001__A533,240327/moonwalk_R_001__A533.csv,7.2,361,50,False,not_tested,BONES-SEED Dataset License Agreement
 36,036__dance__B_DadDance__retarget__B_DadDance,dance/B_DadDance/retarget/B_DadDance.csv,54.8,2741,50,True,not_tested,CC-BY-4.0
 37,037__dance__B_LongDance__retarget__B_LongDance,dance/B_LongDance/retarget/B_LongDance.csv,132.42,6622,50,True,not_tested,CC-BY-4.0
 38,038__dance__B_SpiralDance__retarget__B_SpiralDance,dance/B_SpiralDance/retarget/B_SpiralDance.csv,60.78,3040,50,True,not_tested,CC-BY-4.0

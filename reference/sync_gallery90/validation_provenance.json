@@ -26,5 +26,11 @@
   "native_reader_validation": "All exported motion arrays loaded with the existing SONIC C++ motion-data reader",
   "data_integrity": "All six CSV arrays per clip and metadata.txt byte-identical to the prepared library; provenance JSON paths replaced with public source identifiers",
   "limitations": "One nominal trial per clip; simulation completion does not establish hardware safety or robust tracking",
-  "included_motion_count": 21
+  "included_motion_count": 51,
+  "included_padded_g1_moves_count": 21,
+  "included_bones_count": 29,
+  "included_macarena_count": 1,
+  "release_simulation_scope": "Only the 21 included padded G1 Moves dances; no new controller trials were run for the Macarena/BONES copy operation",
+  "macarena_provenance": "Eight files byte-identical to the previously tested baseline and pinned upstream SONIC sample",
+  "bones_provenance": "Six runtime CSVs and metadata byte-identical to the prepared unpadded BONES references; conversion JSON uses source identifiers instead of server paths"
 }

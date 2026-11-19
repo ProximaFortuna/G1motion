@@ -3,9 +3,8 @@
     "number": 0,
     "directory": "000__macarena_001__A545",
     "clip": "macarena_001__A545",
-    "included": false,
+    "included": true,
     "source": "https://github.com/NVlabs/GR00T-WholeBodyControl/tree/1fa5f7fa3966cbd4845c4e641d13c3f0cd5b0d9b/gear_sonic_deploy/reference/example/macarena_001__A545",
-    "reason": "Link to original SONIC sample; no separate motion-data redistribution license identified",
     "license_url": "https://github.com/NVlabs/GR00T-WholeBodyControl/blob/1fa5f7fa3966cbd4845c4e641d13c3f0cd5b0d9b/LICENSE",
     "expected_files": {
       "body_ang_vel.csv": {
@@ -40,267 +39,1254 @@
         "bytes": 463,
         "sha256": "18ab95c70b1ec9ac221b387e2508999cc81c2572ca5f537d273884ad6454c357"
       }
-    }
+    },
+    "availability": "private internal-use copy"
   },
   {
     "number": 1,
     "directory": "001__230124__egypt_dance_R_002__A140",
     "clip": "230124/egypt_dance_R_002__A140.csv",
-    "included": false,
+    "included": true,
     "source": "https://huggingface.co/datasets/bones-studio/seed",
-    "reason": "BONES-SEED prohibits public redistribution and mirrors",
-    "license_url": "https://bones.studio/info/seed-license"
+    "license_url": "https://bones.studio/info/seed-license",
+    "availability": "private internal-use copy",
+    "expected_files": {
+      "body_ang_vel.csv": {
+        "bytes": 260223,
+        "sha256": "9117e376041b44d1924b0e006f7bea5af4fa365f1de061b519bb705810243f5e"
+      },
+      "body_lin_vel.csv": {
+        "bytes": 260131,
+        "sha256": "45bc11977baefa517070e353549c46cb1ac707e6087225be3fdebaeaada25508"
+      },
+      "body_pos.csv": {
+        "bytes": 255742,
+        "sha256": "ac94b9106de1f1957d34bf332e30ec7854a8803349a16d556c327226805f5433"
+      },
+      "body_quat.csv": {
+        "bytes": 346523,
+        "sha256": "9ea1871b485c08620c72d7e7e8e4fda8cf7519afb427c458516515e65fcb489b"
+      },
+      "conversion.json": {
+        "bytes": 2463,
+        "sha256": "ac8ef047f46c339f3858141c11f7acc2923da16cf6717fbb39e10acec9c986cd"
+      },
+      "joint_pos.csv": {
+        "bytes": 83294,
+        "sha256": "3ab5602896017e425366564945aae868b507597ead24c23b81e25e6d1158b41b"
+      },
+      "joint_vel.csv": {
+        "bytes": 83733,
+        "sha256": "2ea01deb6b1d5cb1a2e2903af3ccf289af30a7161368aec554c1490bc0ac984f"
+      },
+      "metadata.txt": {
+        "bytes": 202,
+        "sha256": "537863291b1ce834e822b6c9e096ae4145e80f238770d178dd41430a60558061"
+      }
+    }
   },
   {
     "number": 2,
     "directory": "002__230411__dance_basic_fourth_entry_position_R_002__A308_M",
     "clip": "230411/dance_basic_fourth_entry_position_R_002__A308_M.csv",
-    "included": false,
+    "included": true,
     "source": "https://huggingface.co/datasets/bones-studio/seed",
-    "reason": "BONES-SEED prohibits public redistribution and mirrors",
-    "license_url": "https://bones.studio/info/seed-license"
+    "license_url": "https://bones.studio/info/seed-license",
+    "availability": "private internal-use copy",
+    "expected_files": {
+      "body_ang_vel.csv": {
+        "bytes": 285994,
+        "sha256": "f43a366ddd2b6dcf34e37d872483c288a0880b08b082cf496728b42f666cc8ef"
+      },
+      "body_lin_vel.csv": {
+        "bytes": 286767,
+        "sha256": "bd2ce5a1dc63ebb3f04769068112e35c074e3a648390548c0e5d3bea645d4380"
+      },
+      "body_pos.csv": {
+        "bytes": 283175,
+        "sha256": "bb7c6c31d1fca64853ae6c8bbaf5b474bcfe224d59467a837ab7f90818c32e28"
+      },
+      "body_quat.csv": {
+        "bytes": 379555,
+        "sha256": "4fd4776c96a36aa65bbc459d73fcc3361e8eae67d693f3861ee5a73738feccc4"
+      },
+      "conversion.json": {
+        "bytes": 2487,
+        "sha256": "c4a17b8daa56159056bec757aa618ca638d729177d799ecf154614e1cfebb348"
+      },
+      "joint_pos.csv": {
+        "bytes": 91978,
+        "sha256": "d0b2c9d77fd0a68207157aa6b7b8feeaee808d302c98fe56d4b01953aae90c51"
+      },
+      "joint_vel.csv": {
+        "bytes": 91925,
+        "sha256": "c99ebd64e7c2732f8cfe3e762c69931fe6fd2c45670bc9f6e1766d71944bcdb5"
+      },
+      "metadata.txt": {
+        "bytes": 226,
+        "sha256": "52dd6ac20ee2d477255639c900e17903006793875d39457bcbe43548b6d15e7a"
+      }
+    }
   },
   {
     "number": 3,
     "directory": "003__230411__dance_basic_head_accent_R_fast_001__A308",
     "clip": "230411/dance_basic_head_accent_R_fast_001__A308.csv",
-    "included": false,
+    "included": true,
     "source": "https://huggingface.co/datasets/bones-studio/seed",
-    "reason": "BONES-SEED prohibits public redistribution and mirrors",
-    "license_url": "https://bones.studio/info/seed-license"
+    "license_url": "https://bones.studio/info/seed-license",
+    "availability": "private internal-use copy",
+    "expected_files": {
+      "body_ang_vel.csv": {
+        "bytes": 154362,
+        "sha256": "5442aed92c6acc7715333e15620bf272cc5646d598cadf9b2e7191c885b77fe8"
+      },
+      "body_lin_vel.csv": {
+        "bytes": 154921,
+        "sha256": "b6c239e56ee4ee680b97a6f7f9e37725f0dcb4610054448e0a19bb8cf1c56b4b"
+      },
+      "body_pos.csv": {
+        "bytes": 153459,
+        "sha256": "4960e99bb11d05c6f9a4770579164b61c1ff7cfd89894066bdfa76ce2e5b3492"
+      },
+      "body_quat.csv": {
+        "bytes": 205621,
+        "sha256": "dcdbbcb91c00e7f0f35cf5c99e9247d3fa03202ab6550d4448f6956c3739051f"
+      },
+      "conversion.json": {
+        "bytes": 2481,
+        "sha256": "8c212be46cbdf46d6634b6f695ac4ed939ded87dec0ebe44e90cde71fa503182"
+      },
+      "joint_pos.csv": {
+        "bytes": 49410,
+        "sha256": "9fbbb8f7efb2f4d2a03fb993feca419c2ac7cbae97841a52a61585aa14704b7a"
+      },
+      "joint_vel.csv": {
+        "bytes": 49571,
+        "sha256": "b7ac1cf7153c964a9c19619716a5fd84d86b72abcba260c59451ac19bc286969"
+      },
+      "metadata.txt": {
+        "bytes": 219,
+        "sha256": "ac373bd7bc6571512ba2ef9c7d171bdb9dc2c47e1b9e7d223c3213142730f005"
+      }
+    }
   },
   {
     "number": 4,
     "directory": "004__230411__dance_retro_clap_step_R_003__A310",
     "clip": "230411/dance_retro_clap_step_R_003__A310.csv",
-    "included": false,
+    "included": true,
     "source": "https://huggingface.co/datasets/bones-studio/seed",
-    "reason": "BONES-SEED prohibits public redistribution and mirrors",
-    "license_url": "https://bones.studio/info/seed-license"
+    "license_url": "https://bones.studio/info/seed-license",
+    "availability": "private internal-use copy",
+    "expected_files": {
+      "body_ang_vel.csv": {
+        "bytes": 353549,
+        "sha256": "cb93b428e7c11641576464773508c9823afeae4784ede94458db1975926f68cf"
+      },
+      "body_lin_vel.csv": {
+        "bytes": 354567,
+        "sha256": "b5a67577bde4f6142f65595a5d0c0457c7c8e5afca476959060ef08fdd22f094"
+      },
+      "body_pos.csv": {
+        "bytes": 353089,
+        "sha256": "89ec18c26f5d846116d26e8614d3693fca62a360102659811ce596cca7c604df"
+      },
+      "body_quat.csv": {
+        "bytes": 472337,
+        "sha256": "bf61e899e4ec5831bce1a4d6837fd250f10eacec3768701c0fe468201432f4b3"
+      },
+      "conversion.json": {
+        "bytes": 2472,
+        "sha256": "22826097888d83816f1d97b3e33ba377ab23b6f498d8baca33ee7ebbb486d506"
+      },
+      "joint_pos.csv": {
+        "bytes": 113950,
+        "sha256": "459c77a6defa0c3f690ebe6f1a773a9b29241ac9a587616fa2e3d9856cfeb562"
+      },
+      "joint_vel.csv": {
+        "bytes": 114191,
+        "sha256": "9aad6190e85b97a14060560a97600e484c05309badb46754f26870f5ba971fa3"
+      },
+      "metadata.txt": {
+        "bytes": 212,
+        "sha256": "ac4b48fbe0fc77f40df853a593c5e1f6d670303866b7b5332a0b3ae68a853e16"
+      }
+    }
   },
   {
     "number": 5,
     "directory": "005__230411__dance_retro_clap_step_variation_R_002__A306",
     "clip": "230411/dance_retro_clap_step_variation_R_002__A306.csv",
-    "included": false,
+    "included": true,
     "source": "https://huggingface.co/datasets/bones-studio/seed",
-    "reason": "BONES-SEED prohibits public redistribution and mirrors",
-    "license_url": "https://bones.studio/info/seed-license"
+    "license_url": "https://bones.studio/info/seed-license",
+    "availability": "private internal-use copy",
+    "expected_files": {
+      "body_ang_vel.csv": {
+        "bytes": 300053,
+        "sha256": "36de6babb77cd5a0feb8df59d131d709ad6c1b0519e6c34dc335b7637b893c6f"
+      },
+      "body_lin_vel.csv": {
+        "bytes": 299815,
+        "sha256": "33c7e44d6669fcd318bd7a2f9e9ff5fb787b03f10c9700bbc3b3bc9b42cf9e35"
+      },
+      "body_pos.csv": {
+        "bytes": 298854,
+        "sha256": "0aefaa8bc7ab4b6ef6a73fe02a715f569e41d3621a8b9c54fade41c5a75a17a7"
+      },
+      "body_quat.csv": {
+        "bytes": 400457,
+        "sha256": "bcad90ffe7d04aff751a65c619c1c209579f29010f0fe25c016ab73087355cc8"
+      },
+      "conversion.json": {
+        "bytes": 2481,
+        "sha256": "a6b99a96a0876f64ff1bd9094802861030ec907a11a618ae2341429ca755eff1"
+      },
+      "joint_pos.csv": {
+        "bytes": 96510,
+        "sha256": "2b39137200d259f08262d69044df823be94659d0e5e44181ae0d4883f62027ef"
+      },
+      "joint_vel.csv": {
+        "bytes": 96477,
+        "sha256": "10a617cb7771fccb39ee0dec6b116a31e1faf96ad0c0bacd97805185be9468a2"
+      },
+      "metadata.txt": {
+        "bytes": 222,
+        "sha256": "2a2dd16707f0056ad7e85bbc7e67cabf3933d8e8d8c92aea4b0942d7a3b78bcf"
+      }
+    }
   },
   {
     "number": 6,
     "directory": "006__230411__dance_retro_disco_finger_down_up_R_002__A306_M",
     "clip": "230411/dance_retro_disco_finger_down_up_R_002__A306_M.csv",
-    "included": false,
+    "included": true,
     "source": "https://huggingface.co/datasets/bones-studio/seed",
-    "reason": "BONES-SEED prohibits public redistribution and mirrors",
-    "license_url": "https://bones.studio/info/seed-license"
+    "license_url": "https://bones.studio/info/seed-license",
+    "availability": "private internal-use copy",
+    "expected_files": {
+      "body_ang_vel.csv": {
+        "bytes": 186235,
+        "sha256": "814b2b9ebddc68c611cdd7e4550a23129da7f97a8e7bcfe28bcf93f65d5d98b2"
+      },
+      "body_lin_vel.csv": {
+        "bytes": 185028,
+        "sha256": "7ddda15a6dbd0bc9e351d8353158c28bccf41ed8936bbf765a34a3f1c527f80f"
+      },
+      "body_pos.csv": {
+        "bytes": 181953,
+        "sha256": "f2a105972326d801ed9da447d389b8b1c360fe7d77c039e0b9c192223d79f244"
+      },
+      "body_quat.csv": {
+        "bytes": 246791,
+        "sha256": "aeafd8e0d511fc943ecbd45b4d70341502bbd4dcc564a5815ba4ac67ca01fd83"
+      },
+      "conversion.json": {
+        "bytes": 2486,
+        "sha256": "2ba235cc3a0a4a059cc2d728982aa1e1870da9ab6f2587824e79cb4f42227497"
+      },
+      "joint_pos.csv": {
+        "bytes": 59526,
+        "sha256": "05682f214bbe3b531b1a3643cac91395832892ca1785c3c3cd7f147f6deb16bf"
+      },
+      "joint_vel.csv": {
+        "bytes": 59752,
+        "sha256": "836bc9afb4176d14da8c7eec98e9a18e89045a6daa5df5d54b79aa4b99ebf8fe"
+      },
+      "metadata.txt": {
+        "bytes": 225,
+        "sha256": "4783a12e907c07994f4bdcab83d2add8d8f944b9319857695a4f5e1cf71feb22"
+      }
+    }
   },
   {
     "number": 7,
     "directory": "007__230411__dance_retro_disco_finger_horizontal_R_002__A307",
     "clip": "230411/dance_retro_disco_finger_horizontal_R_002__A307.csv",
-    "included": false,
+    "included": true,
     "source": "https://huggingface.co/datasets/bones-studio/seed",
-    "reason": "BONES-SEED prohibits public redistribution and mirrors",
-    "license_url": "https://bones.studio/info/seed-license"
+    "license_url": "https://bones.studio/info/seed-license",
+    "availability": "private internal-use copy",
+    "expected_files": {
+      "body_ang_vel.csv": {
+        "bytes": 399375,
+        "sha256": "44d109718af7facc8da0c569d61b3fa2861f9fe1f54b6205e19da0f874973aec"
+      },
+      "body_lin_vel.csv": {
+        "bytes": 399068,
+        "sha256": "933248135740205e2621701d3c4f434fc892f67658e380db54f503656808c4e7"
+      },
+      "body_pos.csv": {
+        "bytes": 394445,
+        "sha256": "1ae8ad44d3502afdd94707a170c0ec4ec6fe44548549660a3e0463c24b98ef87"
+      },
+      "body_quat.csv": {
+        "bytes": 528173,
+        "sha256": "f08cd2634f0c3ab32e0cb4a7c9fa0118973b1c9f6c3e1f9a9164ccd3f64f0c22"
+      },
+      "conversion.json": {
+        "bytes": 2488,
+        "sha256": "676fc83c827c6fddd4496f6d609b8aa233f19686026b8e7df2829de031c55703"
+      },
+      "joint_pos.csv": {
+        "bytes": 127301,
+        "sha256": "73078f6a0241db035e690e944c123b33e4e254ab5ce42875659b708a604b4ed6"
+      },
+      "joint_vel.csv": {
+        "bytes": 128402,
+        "sha256": "ecb30987b594139648b4ce765f8e136a0f1abf42a3b47596968089d289b6cf66"
+      },
+      "metadata.txt": {
+        "bytes": 226,
+        "sha256": "d6f05f27422da13f0330e7aafe75359066a42ed1f5858235e9f772b2c02b23aa"
+      }
+    }
   },
   {
     "number": 8,
     "directory": "008__230411__victory_dance_brick_brick_slide_slide_R_002__A308",
     "clip": "230411/victory_dance_brick_brick_slide_slide_R_002__A308.csv",
-    "included": false,
+    "included": true,
     "source": "https://huggingface.co/datasets/bones-studio/seed",
-    "reason": "BONES-SEED prohibits public redistribution and mirrors",
-    "license_url": "https://bones.studio/info/seed-license"
+    "license_url": "https://bones.studio/info/seed-license",
+    "availability": "private internal-use copy",
+    "expected_files": {
+      "body_ang_vel.csv": {
+        "bytes": 290511,
+        "sha256": "c1676a0f4409c63e94062a0ed4f1643f5af45c6914a9feea71d9056e3a37c769"
+      },
+      "body_lin_vel.csv": {
+        "bytes": 290261,
+        "sha256": "7cbcaa1fcb61da813dee05bf4079279be10d83596dfe3a0342b9ffa3297c3fe2"
+      },
+      "body_pos.csv": {
+        "bytes": 286711,
+        "sha256": "927a11b516f2f2eb76a1e15408c4079e50db9725bc1ae9ef55e0cf2a0b49891a"
+      },
+      "body_quat.csv": {
+        "bytes": 388690,
+        "sha256": "fec0ca16550e7973928d9a1162a1b02ebbf7005df12f270a5c0002ee85f17b64"
+      },
+      "conversion.json": {
+        "bytes": 2489,
+        "sha256": "b249b26663f745c36f709b8ecf2830eb9ceda00068c727f39fb64d1667d51df7"
+      },
+      "joint_pos.csv": {
+        "bytes": 93304,
+        "sha256": "ec8a7900e1c67cd461dd01d7304fff51ac73b8ba2dc9ba30b2b69343104dac7b"
+      },
+      "joint_vel.csv": {
+        "bytes": 93707,
+        "sha256": "a4c78b7eed9971f76396286b9f380a3ee7535b4e181415dcd4f02a7f714a4668"
+      },
+      "metadata.txt": {
+        "bytes": 228,
+        "sha256": "f9f5b60c2ecb24b316306561495472681c94f7f66600fc6a8b7f82980a109d5e"
+      }
+    }
   },
   {
     "number": 9,
     "directory": "009__230411__victory_dance_robot_dance_180_R_003__A306",
     "clip": "230411/victory_dance_robot_dance_180_R_003__A306.csv",
-    "included": false,
+    "included": true,
     "source": "https://huggingface.co/datasets/bones-studio/seed",
-    "reason": "BONES-SEED prohibits public redistribution and mirrors",
-    "license_url": "https://bones.studio/info/seed-license"
+    "license_url": "https://bones.studio/info/seed-license",
+    "availability": "private internal-use copy",
+    "expected_files": {
+      "body_ang_vel.csv": {
+        "bytes": 719550,
+        "sha256": "c8c1405b912d24038fcf5a61e1c04a64709b784085e27b88c207f123c71e5035"
+      },
+      "body_lin_vel.csv": {
+        "bytes": 719059,
+        "sha256": "51b02d76844f2e735ac68022798a86de7feb43c81381dab19e092092fe719b79"
+      },
+      "body_pos.csv": {
+        "bytes": 710461,
+        "sha256": "a5366765f0665837dfbc40228df5cfc76488e8865ca463557d77e9fb2576eda1"
+      },
+      "body_quat.csv": {
+        "bytes": 960206,
+        "sha256": "6dd54dc2a485c60490d743029aee5806aad89c37dd9f286f027e0785bf60ec4a"
+      },
+      "conversion.json": {
+        "bytes": 2482,
+        "sha256": "7f93078bd2cff370ba87da84ae1b9c9aeb55c75a2a8b5c7151a8b0974922f52d"
+      },
+      "joint_pos.csv": {
+        "bytes": 231777,
+        "sha256": "e22971dccd89e77e45a43be3ca7ffd8eb429d2dc6a6fde0de464c695069075ab"
+      },
+      "joint_vel.csv": {
+        "bytes": 231804,
+        "sha256": "a28a5dfdcdacd8b57597f21183e94103b8d39dc000d9039bfa48570cd7d3c8ea"
+      },
+      "metadata.txt": {
+        "bytes": 220,
+        "sha256": "863bd58e96e91476644fe884468bbc215881a6d821b945e263f360731a1cc58f"
+      }
+    }
   },
   {
     "number": 10,
     "directory": "010__230411__victory_dance_robot_dance_180_R_003__A310_M",
     "clip": "230411/victory_dance_robot_dance_180_R_003__A310_M.csv",
-    "included": false,
+    "included": true,
     "source": "https://huggingface.co/datasets/bones-studio/seed",
-    "reason": "BONES-SEED prohibits public redistribution and mirrors",
-    "license_url": "https://bones.studio/info/seed-license"
+    "license_url": "https://bones.studio/info/seed-license",
+    "availability": "private internal-use copy",
+    "expected_files": {
+      "body_ang_vel.csv": {
+        "bytes": 488532,
+        "sha256": "705143ed43446f178e4b8879b685de6d698aaf0647d65a1d7682da00ede48040"
+      },
+      "body_lin_vel.csv": {
+        "bytes": 488521,
+        "sha256": "2b67577db0bbec3efe30981f965061e98bd0e65556f197727cbe830a0d93daf2"
+      },
+      "body_pos.csv": {
+        "bytes": 481925,
+        "sha256": "bc2cb2f91e6285430800fb765f2f0572a64e60ae89ee1b036756ce3f097fad83"
+      },
+      "body_quat.csv": {
+        "bytes": 652037,
+        "sha256": "c8f6e46b58c8007da965dd8dd0e676543e7ee7affd634f53f150d8af65ed334d"
+      },
+      "conversion.json": {
+        "bytes": 2482,
+        "sha256": "b7fb4e11a9e0c12a25389a4726e9c52cc4b9755db7abf3314947e15c584291a1"
+      },
+      "joint_pos.csv": {
+        "bytes": 157518,
+        "sha256": "886461e801ca0150b0a310c664ede81f92196fedf5ebf4a17e635c7fa3440b81"
+      },
+      "joint_vel.csv": {
+        "bytes": 157258,
+        "sha256": "2189562118b21354a5ee023d99d403fb258044ccc3c172f9f4fc723c29242ef9"
+      },
+      "metadata.txt": {
+        "bytes": 222,
+        "sha256": "811436b0835350f5431b644c858b30ec5c67faa214a59dc89c72af59ae5c748f"
+      }
+    }
   },
   {
     "number": 11,
     "directory": "011__230411__dance_retro_charleston_jump_R_001__A309_M",
     "clip": "230411/dance_retro_charleston_jump_R_001__A309_M.csv",
-    "included": false,
+    "included": true,
     "source": "https://huggingface.co/datasets/bones-studio/seed",
-    "reason": "BONES-SEED prohibits public redistribution and mirrors",
-    "license_url": "https://bones.studio/info/seed-license"
+    "license_url": "https://bones.studio/info/seed-license",
+    "availability": "private internal-use copy",
+    "expected_files": {
+      "body_ang_vel.csv": {
+        "bytes": 165307,
+        "sha256": "10c701b8f5732f0fb05fcdc68d399fecbb269cbaf92ca2687f45341c633a0abc"
+      },
+      "body_lin_vel.csv": {
+        "bytes": 164764,
+        "sha256": "22e63103606926f1be69d598afadce644cb7ce73e2d245d1d901693782c445e7"
+      },
+      "body_pos.csv": {
+        "bytes": 160902,
+        "sha256": "06073c2bd8747d8442f233db47a7edba944be3f5f08057c4d822268c94e3568d"
+      },
+      "body_quat.csv": {
+        "bytes": 218578,
+        "sha256": "23f4247afe5ce510dd4eb558ffd061d00f76e7f02e8137a1584a8a2ff15b01bb"
+      },
+      "conversion.json": {
+        "bytes": 2481,
+        "sha256": "81b441d7a02a3cf4c61fa9efd5d82b11cb19dda4c2478df52c71496e869fc556"
+      },
+      "joint_pos.csv": {
+        "bytes": 52770,
+        "sha256": "7bd9b1ee7b57c6d74648ec27c7cbf7859a3e6450df7067ec73e9bc4ae7af156a"
+      },
+      "joint_vel.csv": {
+        "bytes": 53124,
+        "sha256": "0b8d4b85ef477f8729c0eab8f51799d99c9e5236ebfeb672f4b786b1724bb432"
+      },
+      "metadata.txt": {
+        "bytes": 220,
+        "sha256": "669b228b55194f64040e2ffc39f6c62c5aaa51559db58534003b2a9a966713db"
+      }
+    }
   },
   {
     "number": 12,
     "directory": "012__230411__dance_basic_padeburee_R_fast_002__A307",
     "clip": "230411/dance_basic_padeburee_R_fast_002__A307.csv",
-    "included": false,
+    "included": true,
     "source": "https://huggingface.co/datasets/bones-studio/seed",
-    "reason": "BONES-SEED prohibits public redistribution and mirrors",
-    "license_url": "https://bones.studio/info/seed-license"
+    "license_url": "https://bones.studio/info/seed-license",
+    "availability": "private internal-use copy",
+    "expected_files": {
+      "body_ang_vel.csv": {
+        "bytes": 370033,
+        "sha256": "5ab753b1c2ca77d4bcd84a78331ab4e90e9240490ac463dae8fb6656f2cce46f"
+      },
+      "body_lin_vel.csv": {
+        "bytes": 368687,
+        "sha256": "ec5b6e6b768e9423564b0c20730bd483612bf3a775ebaa096de0e2187fd72e94"
+      },
+      "body_pos.csv": {
+        "bytes": 362339,
+        "sha256": "33eaf450c9e38f687df21c83b5bc09562c95124633416f39ac7eda26a3ba622b"
+      },
+      "body_quat.csv": {
+        "bytes": 491276,
+        "sha256": "7610ca0d3c028add007c3c221b15af89377cf29e7d7aaf3c69717526cf47463a"
+      },
+      "conversion.json": {
+        "bytes": 2476,
+        "sha256": "57e103a2267e3556ff656c9b4ec5f74ee8e31040db2b07c4e3d30efb498e9a70"
+      },
+      "joint_pos.csv": {
+        "bytes": 118823,
+        "sha256": "eb3aa813cd28b9445a2728e9bc722cb1928f6c5b28d7455182b9e983506beb6b"
+      },
+      "joint_vel.csv": {
+        "bytes": 119232,
+        "sha256": "785ef9fcb82cf194aefde60081b7b9e2712145f0c999dcd38abfc58dcd44ec95"
+      },
+      "metadata.txt": {
+        "bytes": 217,
+        "sha256": "9b576faf3d78468b1a010ab0a441868b6e7f35e71061c79df76c438809f8e69d"
+      }
+    }
   },
   {
     "number": 13,
     "directory": "013__230411__victory_dance_orange_justice_180_R_001__A309",
     "clip": "230411/victory_dance_orange_justice_180_R_001__A309.csv",
-    "included": false,
+    "included": true,
     "source": "https://huggingface.co/datasets/bones-studio/seed",
-    "reason": "BONES-SEED prohibits public redistribution and mirrors",
-    "license_url": "https://bones.studio/info/seed-license"
+    "license_url": "https://bones.studio/info/seed-license",
+    "availability": "private internal-use copy",
+    "expected_files": {
+      "body_ang_vel.csv": {
+        "bytes": 437746,
+        "sha256": "139e59c85ee01e0f081f5abf390cd2006a16f52a2cb7b0a927e57ab44392a69e"
+      },
+      "body_lin_vel.csv": {
+        "bytes": 436397,
+        "sha256": "70ac767f722fa9110ad2a1ccaac7253b0176e1e16baf277b511efc442777ec97"
+      },
+      "body_pos.csv": {
+        "bytes": 428669,
+        "sha256": "a065b6ed1435acd1113a0e49bc3d7fdec3985d7433c8c50c0d50874b85b9d2ff"
+      },
+      "body_quat.csv": {
+        "bytes": 580998,
+        "sha256": "40665d9a7f1eab405a7da7e7dca666ab93b25afd1446b1d61cccf44ead479861"
+      },
+      "conversion.json": {
+        "bytes": 2485,
+        "sha256": "bdb3ec84c0578de381d0e8a93f61d875fc42e8c701e946d37047002cb84b6214"
+      },
+      "joint_pos.csv": {
+        "bytes": 139960,
+        "sha256": "56a1d68d2a6fa7ff17d498dc90327635ea76ba7a9cd6cf9cad942d92d9b8ace2"
+      },
+      "joint_vel.csv": {
+        "bytes": 140873,
+        "sha256": "e0ecacebdd55d3829775208634df1012b4e9f69b1442b397b997ac9ae2dd8848"
+      },
+      "metadata.txt": {
+        "bytes": 223,
+        "sha256": "8a470f5daa7cb15168329fc0b3574f133f6a21927e0b83c2e8842d600065e69a"
+      }
+    }
   },
   {
     "number": 14,
     "directory": "014__230411__victory_dance_ymca_R_002__A308",
     "clip": "230411/victory_dance_ymca_R_002__A308.csv",
-    "included": false,
+    "included": true,
     "source": "https://huggingface.co/datasets/bones-studio/seed",
-    "reason": "BONES-SEED prohibits public redistribution and mirrors",
-    "license_url": "https://bones.studio/info/seed-license"
+    "license_url": "https://bones.studio/info/seed-license",
+    "availability": "private internal-use copy",
+    "expected_files": {
+      "body_ang_vel.csv": {
+        "bytes": 508604,
+        "sha256": "3b6c563bf25da31ba7d3134febd4f5df8d0844b874144961ffe50716ca95cd08"
+      },
+      "body_lin_vel.csv": {
+        "bytes": 508905,
+        "sha256": "c341092ad6b255cac38f35c76beed2ebf1a97077eaa54c7f0c37a2f749204d2d"
+      },
+      "body_pos.csv": {
+        "bytes": 496184,
+        "sha256": "3ba40d9b203767c51a6d5d3dd8cab9edf7d94af78e6b55dc40b68857bc3489d3"
+      },
+      "body_quat.csv": {
+        "bytes": 684038,
+        "sha256": "015c550515a8818054f69d66c6e060bc2affce1eeac35c29390ade403863d057"
+      },
+      "conversion.json": {
+        "bytes": 2470,
+        "sha256": "cb0f0bb5151f741f325e0c7a97024165b17337722f1443b29c1d060dacd7a1ba"
+      },
+      "joint_pos.csv": {
+        "bytes": 163808,
+        "sha256": "8d2829c6b35136fbca506aec967f0d998a04541a181b28a545d0cf418492fa50"
+      },
+      "joint_vel.csv": {
+        "bytes": 163835,
+        "sha256": "87889e47d18489013e3713a7a65e4623ec52a4d4e46c09cd8bab6587f0104e62"
+      },
+      "metadata.txt": {
+        "bytes": 209,
+        "sha256": "c5f84aac36710fbb9baa51df9a0e41811c11280e1f89b0bc9f9355fc0d676e71"
+      }
+    }
   },
   {
     "number": 15,
     "directory": "015__230412__dance_hiphop_flintstones_kick_ball_change_R_003__A312",
     "clip": "230412/dance_hiphop_flintstones_kick_ball_change_R_003__A312.csv",
-    "included": false,
+    "included": true,
     "source": "https://huggingface.co/datasets/bones-studio/seed",
-    "reason": "BONES-SEED prohibits public redistribution and mirrors",
-    "license_url": "https://bones.studio/info/seed-license"
+    "license_url": "https://bones.studio/info/seed-license",
+    "availability": "private internal-use copy",
+    "expected_files": {
+      "body_ang_vel.csv": {
+        "bytes": 523730,
+        "sha256": "e6067b728a23a129e208837b5def05c035985d67bfb935c848586dfb8b2cb766"
+      },
+      "body_lin_vel.csv": {
+        "bytes": 522939,
+        "sha256": "aabc67366e8dc82a8196dfa6150c256208bbde2d5f60a267d7e7a9386af83cd6"
+      },
+      "body_pos.csv": {
+        "bytes": 520606,
+        "sha256": "3fc848ccce9421362fc9bf0ce57c384bf1a6d0a8e8a4000259de2d25332c8575"
+      },
+      "body_quat.csv": {
+        "bytes": 693625,
+        "sha256": "3bc2aa49f15baa0a6cffaee53f18a2c2b6e9ec85e0fc344bb52729441f48ad23"
+      },
+      "conversion.json": {
+        "bytes": 2496,
+        "sha256": "34775af167f5d20369b8b7030fc9051f78c27369d30f119a045dbd8e6e060ec2"
+      },
+      "joint_pos.csv": {
+        "bytes": 167375,
+        "sha256": "a3cbcb29bc58734fb8794367b343d5853b3fde1c61edd6be34bcfc9e97ce86e5"
+      },
+      "joint_vel.csv": {
+        "bytes": 168570,
+        "sha256": "a895fb2f7a81069e49916ca3d0511e3df5d384da52fd15a93d16f569a64fa3d4"
+      },
+      "metadata.txt": {
+        "bytes": 232,
+        "sha256": "edc2b2c0e6c9e6d9511be728212db85ae41e8040964f9bb9db99d92203488733"
+      }
+    }
   },
   {
     "number": 16,
     "directory": "016__230412__dance_hiphop_2_step_270_R_002__A311",
     "clip": "230412/dance_hiphop_2_step_270_R_002__A311.csv",
-    "included": false,
+    "included": true,
     "source": "https://huggingface.co/datasets/bones-studio/seed",
-    "reason": "BONES-SEED prohibits public redistribution and mirrors",
-    "license_url": "https://bones.studio/info/seed-license"
+    "license_url": "https://bones.studio/info/seed-license",
+    "availability": "private internal-use copy",
+    "expected_files": {
+      "body_ang_vel.csv": {
+        "bytes": 434908,
+        "sha256": "ba9e30052f945c1fa014c3ce06c26c18746307a3d8c66790107c997707426f5e"
+      },
+      "body_lin_vel.csv": {
+        "bytes": 434033,
+        "sha256": "de8e416083bd6bd7a4f7033a809c64aca96b84263496589734889ce16b606ae5"
+      },
+      "body_pos.csv": {
+        "bytes": 427903,
+        "sha256": "6fb33c5e87f58b3d424a5fbdc1af6c64c9b58400b3ee8bd16e22925e49698bf2"
+      },
+      "body_quat.csv": {
+        "bytes": 576216,
+        "sha256": "07f440b530804649faa6bc4da10ad4618d7fb7bdae9248f4673d44a485074372"
+      },
+      "conversion.json": {
+        "bytes": 2476,
+        "sha256": "e975f682060bf9f2fe74dfc7f2365f3c7c6909210fa34842e0438765d7ba2239"
+      },
+      "joint_pos.csv": {
+        "bytes": 139803,
+        "sha256": "671f6193105cbdde2286c37f99f23ff2f0b53fe32f3c21a6507fca134ad92478"
+      },
+      "joint_vel.csv": {
+        "bytes": 139920,
+        "sha256": "10cc4960576711c97da54a5081fbc8b412de3953a368aaffffae39f0983f9aed"
+      },
+      "metadata.txt": {
+        "bytes": 214,
+        "sha256": "2674406d03b4e4b285c1523bc0a9efd5294fb0284fc0e2c2730ecb6a5535ad9f"
+      }
+    }
   },
   {
     "number": 17,
     "directory": "017__230412__dance_hiphop_2_step_270_R_003__A311",
     "clip": "230412/dance_hiphop_2_step_270_R_003__A311.csv",
-    "included": false,
+    "included": true,
     "source": "https://huggingface.co/datasets/bones-studio/seed",
-    "reason": "BONES-SEED prohibits public redistribution and mirrors",
-    "license_url": "https://bones.studio/info/seed-license"
+    "license_url": "https://bones.studio/info/seed-license",
+    "availability": "private internal-use copy",
+    "expected_files": {
+      "body_ang_vel.csv": {
+        "bytes": 401205,
+        "sha256": "aaa3fb0a26ecb34bd87485571df5f0ecaf6069d9af8100b0ffb2797e3d1e7abe"
+      },
+      "body_lin_vel.csv": {
+        "bytes": 400983,
+        "sha256": "c583c4376435783216d0eb9f45cd6bf8bcccba97c7efe961974f85221e0b1c4c"
+      },
+      "body_pos.csv": {
+        "bytes": 393958,
+        "sha256": "6baa92a47b195a6fd2d3cd7872e42d821422b95e583c80c17b8dffeba51e16c4"
+      },
+      "body_quat.csv": {
+        "bytes": 530631,
+        "sha256": "db4fa462c2faaa00f1e9e314bfe5bb5992c993eb4adf625a30ddda34b8d67abd"
+      },
+      "conversion.json": {
+        "bytes": 2472,
+        "sha256": "e4b6fe4b321514819972fac34b88d8b8ea9a40266c2cb6ba5542f6046f566ce5"
+      },
+      "joint_pos.csv": {
+        "bytes": 128691,
+        "sha256": "e98e7c54b0f18628411d054d413eec7b2d7e2d240b080d869646a4453adaccb6"
+      },
+      "joint_vel.csv": {
+        "bytes": 129057,
+        "sha256": "1ec52082d1c5bc407d3a4551fb1ecef231e75a981951047f3c0833f322f11b3d"
+      },
+      "metadata.txt": {
+        "bytes": 214,
+        "sha256": "66c9a205fcfb6e88aa699b06ff77469f400bd2f7c6145106c87e885b8c5a2681"
+      }
+    }
   },
   {
     "number": 18,
     "directory": "018__230412__dance_hiphop_alt_stump_R_003__A313",
     "clip": "230412/dance_hiphop_alt_stump_R_003__A313.csv",
-    "included": false,
+    "included": true,
     "source": "https://huggingface.co/datasets/bones-studio/seed",
-    "reason": "BONES-SEED prohibits public redistribution and mirrors",
-    "license_url": "https://bones.studio/info/seed-license"
+    "license_url": "https://bones.studio/info/seed-license",
+    "availability": "private internal-use copy",
+    "expected_files": {
+      "body_ang_vel.csv": {
+        "bytes": 340384,
+        "sha256": "c8e2edc11b443a3cef54135df3008b050877d3257652d348d46ab02e2aef1c24"
+      },
+      "body_lin_vel.csv": {
+        "bytes": 340167,
+        "sha256": "f443e6547cc9c3cb3e51bd4fc8210255dd69169036e7027db8463b46996662ca"
+      },
+      "body_pos.csv": {
+        "bytes": 337035,
+        "sha256": "2e01b11e30ae8d588d77dea8ed3054130caf48bfbea03d307f19e19d24842ebe"
+      },
+      "body_quat.csv": {
+        "bytes": 452048,
+        "sha256": "e8c3089f01c2acb2a95c3b7cfade5e5b8b0552b7720d2a309ba69afc32e0ab8e"
+      },
+      "conversion.json": {
+        "bytes": 2474,
+        "sha256": "6070bbd636ac6609b4d8e77d242aef871fb2d82498b102a7f52c08643d0cd001"
+      },
+      "joint_pos.csv": {
+        "bytes": 109226,
+        "sha256": "9c722249eaa4f03d2b207d66564747f9d4f1d3d12a5039f6fc623b148a6439fb"
+      },
+      "joint_vel.csv": {
+        "bytes": 109580,
+        "sha256": "4974740c00c82be110098a0526a7e5f1f671b7e44c46196a3b78a15fa5f6b83a"
+      },
+      "metadata.txt": {
+        "bytes": 213,
+        "sha256": "65c72f851fd82ec8da33802c8a5a440d3fc1fb4ba9b7a8b4c949577d8b8a8a81"
+      }
+    }
   },
   {
     "number": 19,
     "directory": "019__230412__dance_hiphop_bart_simpson_R_001__A311_M",
     "clip": "230412/dance_hiphop_bart_simpson_R_001__A311_M.csv",
-    "included": false,
+    "included": true,
     "source": "https://huggingface.co/datasets/bones-studio/seed",
-    "reason": "BONES-SEED prohibits public redistribution and mirrors",
-    "license_url": "https://bones.studio/info/seed-license"
+    "license_url": "https://bones.studio/info/seed-license",
+    "availability": "private internal-use copy",
+    "expected_files": {
+      "body_ang_vel.csv": {
+        "bytes": 579387,
+        "sha256": "91bcdd5dae73b9467647260446f76e393b2f2073645a4f579068e46cb81df2ea"
+      },
+      "body_lin_vel.csv": {
+        "bytes": 579036,
+        "sha256": "6aa3ae1034ec7eefa93f80ed996522e0237dfb898003d07084ff23e89957086a"
+      },
+      "body_pos.csv": {
+        "bytes": 567382,
+        "sha256": "cfd8d47e7fd7aedce8b6f3487a776f6f1ec6daa084861b12b7179e2070b4963f"
+      },
+      "body_quat.csv": {
+        "bytes": 770381,
+        "sha256": "628460b4ffbfd59b9683ab5cb8788af2ad288610b0545027083997b7d48bdc4b"
+      },
+      "conversion.json": {
+        "bytes": 2481,
+        "sha256": "5a7e165263cbf1e3355612f7adf26b0909a301b5c8ecafc31a55b8172c8dd032"
+      },
+      "joint_pos.csv": {
+        "bytes": 186545,
+        "sha256": "6405760aec0c44e7343a5fcaf8e45b6269b75b3117de0fc4828936093c1c73a6"
+      },
+      "joint_vel.csv": {
+        "bytes": 186819,
+        "sha256": "7bf216a9cc8b2c9a9f674be12f49900e7e592e2a3362554b3c81a010a74093c0"
+      },
+      "metadata.txt": {
+        "bytes": 218,
+        "sha256": "890c6bf9e5f0a848d0e8e52bfef935ecac452212880a4448ab5ff3dbc133f6b4"
+      }
+    }
   },
   {
     "number": 20,
     "directory": "020__230412__dance_hiphop_bounce_180_R_002__A313",
     "clip": "230412/dance_hiphop_bounce_180_R_002__A313.csv",
-    "included": false,
+    "included": true,
     "source": "https://huggingface.co/datasets/bones-studio/seed",
-    "reason": "BONES-SEED prohibits public redistribution and mirrors",
-    "license_url": "https://bones.studio/info/seed-license"
+    "license_url": "https://bones.studio/info/seed-license",
+    "availability": "private internal-use copy",
+    "expected_files": {
+      "body_ang_vel.csv": {
+        "bytes": 413732,
+        "sha256": "e0830db97f33dfdcd36a089d9eb1a4300e4d8fb30b4143be565c9dadabb8a24e"
+      },
+      "body_lin_vel.csv": {
+        "bytes": 413978,
+        "sha256": "32be1d79fd00e5a918438e4257b73180173bd4692d833678001248d50a53f218"
+      },
+      "body_pos.csv": {
+        "bytes": 411498,
+        "sha256": "fc9d58baced81dfadad4ed32020de66ef226fa5e622dc94d265e1189178125be"
+      },
+      "body_quat.csv": {
+        "bytes": 546549,
+        "sha256": "de467fc23bfdcc0fe15a06b686d20ee20b6518ca01e86d6c5d44f5e482d33b03"
+      },
+      "conversion.json": {
+        "bytes": 2474,
+        "sha256": "8ce1870d5bb4bf78fccc6a21d8511cad283aea4a445295033533c9650cd971dc"
+      },
+      "joint_pos.csv": {
+        "bytes": 132761,
+        "sha256": "1a106473943b241ba512610f1ea0cd7acc64bcebd76507c1c59cd054e135b975"
+      },
+      "joint_vel.csv": {
+        "bytes": 133009,
+        "sha256": "e4647c354b3fea74d8fd2550c3957c1d72823199ac686d124461e6cbf2fd3c5e"
+      },
+      "metadata.txt": {
+        "bytes": 214,
+        "sha256": "49ce0c16d3caf17c4d83fa3e058209e4681353a7b27bf27af16be7c72eb1839f"
+      }
+    }
   },
   {
     "number": 21,
     "directory": "021__230412__dance_hiphop_bounce_to_feed_R_002__A314_M",
     "clip": "230412/dance_hiphop_bounce_to_feed_R_002__A314_M.csv",
-    "included": false,
+    "included": true,
     "source": "https://huggingface.co/datasets/bones-studio/seed",
-    "reason": "BONES-SEED prohibits public redistribution and mirrors",
-    "license_url": "https://bones.studio/info/seed-license"
+    "license_url": "https://bones.studio/info/seed-license",
+    "availability": "private internal-use copy",
+    "expected_files": {
+      "body_ang_vel.csv": {
+        "bytes": 183675,
+        "sha256": "a4bb7b6f2b40b3c69cd194173b4eabab7c60929b9f6471817557a72bb1cc2967"
+      },
+      "body_lin_vel.csv": {
+        "bytes": 183284,
+        "sha256": "d17fb11b91fddd0fde7cbe9df93094115fd0067e699883c68a305047c46a60fa"
+      },
+      "body_pos.csv": {
+        "bytes": 179075,
+        "sha256": "d657e9385239d6b1f0dc22b7e9fb0a985b3bea903dcf1c4b860acaeb32e57ed5"
+      },
+      "body_quat.csv": {
+        "bytes": 241992,
+        "sha256": "c2780ad50c52837a6666311ed5972b3d53429dc58eca832adb93e90f91fa23c5"
+      },
+      "conversion.json": {
+        "bytes": 2482,
+        "sha256": "aef9312cf50a05f1ef39f8f4c04593f5047603eb55fa8002ef07bd6f8bd1529c"
+      },
+      "joint_pos.csv": {
+        "bytes": 58933,
+        "sha256": "e3970049254b5ac5a7c3b4846f81f1f2435fc3deb575c5378ff11816596f5d5a"
+      },
+      "joint_vel.csv": {
+        "bytes": 58973,
+        "sha256": "49d002ef880f0a04fac135b276052d977fb79dfa151f8bfe037688e11ab0b521"
+      },
+      "metadata.txt": {
+        "bytes": 220,
+        "sha256": "152f41d99a7a0375f803eb469dc20277cc148da1d43741d3c77e602404fea5e4"
+      }
+    }
   },
   {
     "number": 22,
     "directory": "022__230412__dance_hiphop_cabath_path_R_001__A312",
     "clip": "230412/dance_hiphop_cabath_path_R_001__A312.csv",
-    "included": false,
+    "included": true,
     "source": "https://huggingface.co/datasets/bones-studio/seed",
-    "reason": "BONES-SEED prohibits public redistribution and mirrors",
-    "license_url": "https://bones.studio/info/seed-license"
+    "license_url": "https://bones.studio/info/seed-license",
+    "availability": "private internal-use copy",
+    "expected_files": {
+      "body_ang_vel.csv": {
+        "bytes": 598611,
+        "sha256": "eb054349e27a94565d720665117f5a14a69012ab45f8b7773b053bf12871c314"
+      },
+      "body_lin_vel.csv": {
+        "bytes": 599454,
+        "sha256": "2b338d9f2c35648e913e53e45e81c52fd15a66fb1fcc9fa77c0fe450180a01d3"
+      },
+      "body_pos.csv": {
+        "bytes": 594549,
+        "sha256": "59e874d0755fc3a026d229b718106c55e7edaf288b9c7889f0bfcbc8f42ad4c4"
+      },
+      "body_quat.csv": {
+        "bytes": 797892,
+        "sha256": "c0b7ec0397c77d739f308358335802f936fedf217c1281b9dec2c7036ec84589"
+      },
+      "conversion.json": {
+        "bytes": 2477,
+        "sha256": "a36c98e857675daecbf2f2326d10fa9e02573f82f4fd2103c347874e70f9939e"
+      },
+      "joint_pos.csv": {
+        "bytes": 192445,
+        "sha256": "64a62f56c42e1bdce5e20a0aa2d587e382a84759a670da04278016d74fc6ab9e"
+      },
+      "joint_vel.csv": {
+        "bytes": 192847,
+        "sha256": "80a1e2f03c9e070a175dc908f7aa8be88cab032ae25e2870526366045d311a4a"
+      },
+      "metadata.txt": {
+        "bytes": 215,
+        "sha256": "5dc5225b646985e4e50afc55ab563f1530d4542fc7618d40326751d31c68937b"
+      }
+    }
   },
   {
     "number": 23,
     "directory": "023__230412__dance_hiphop_happy_feet_R_001__A313_M",
     "clip": "230412/dance_hiphop_happy_feet_R_001__A313_M.csv",
-    "included": false,
+    "included": true,
     "source": "https://huggingface.co/datasets/bones-studio/seed",
-    "reason": "BONES-SEED prohibits public redistribution and mirrors",
-    "license_url": "https://bones.studio/info/seed-license"
+    "license_url": "https://bones.studio/info/seed-license",
+    "availability": "private internal-use copy",
+    "expected_files": {
+      "body_ang_vel.csv": {
+        "bytes": 314237,
+        "sha256": "5fb2255d873bd1dc0a4d2b092248193d093964ecf023fe5333dc29de529699e7"
+      },
+      "body_lin_vel.csv": {
+        "bytes": 313677,
+        "sha256": "e0e3547b8b0c55f5d5d8f82932cf69178eec03d02a3f38a1c1107b1cd5af2754"
+      },
+      "body_pos.csv": {
+        "bytes": 309553,
+        "sha256": "61120b56edc60e2aea7dfdab1b4168c88f0268258d6af4f90df1d6deaa1958d4"
+      },
+      "body_quat.csv": {
+        "bytes": 417935,
+        "sha256": "e3698e056ecc2e276f476dd961f7dd07a6595f568ae99edc3143bf7b50edf7fb"
+      },
+      "conversion.json": {
+        "bytes": 2478,
+        "sha256": "bd39cddf35d94c953cf0236cc14bd9443b62b259ddd74a060f94fa9c06678e07"
+      },
+      "joint_pos.csv": {
+        "bytes": 101269,
+        "sha256": "319d285922647a4f426ae26e141587ec3bbfebe43412642d1c55808295c2ec21"
+      },
+      "joint_vel.csv": {
+        "bytes": 101202,
+        "sha256": "e1fc270d5b5207562941f9ee9a1b2be57d870e8d8ec54da79160347a8d04c845"
+      },
+      "metadata.txt": {
+        "bytes": 216,
+        "sha256": "e6e9c9f5fd1aed9402d8706c7df12039097c6907820ab35ff1a19316948d26ba"
+      }
+    }
   },
   {
     "number": 24,
     "directory": "024__230412__dance_hiphop_kick_it_variation_R_002__A315_M",
     "clip": "230412/dance_hiphop_kick_it_variation_R_002__A315_M.csv",
-    "included": false,
+    "included": true,
     "source": "https://huggingface.co/datasets/bones-studio/seed",
-    "reason": "BONES-SEED prohibits public redistribution and mirrors",
-    "license_url": "https://bones.studio/info/seed-license"
+    "license_url": "https://bones.studio/info/seed-license",
+    "availability": "private internal-use copy",
+    "expected_files": {
+      "body_ang_vel.csv": {
+        "bytes": 531520,
+        "sha256": "f18531b1ea8b955083320809e9cd1eb1df4282312414ba766832d6bbe43c77c6"
+      },
+      "body_lin_vel.csv": {
+        "bytes": 532216,
+        "sha256": "bf6168a75a89c114209c3d0c644d370a2b613bdfc80ece351847d7a053f9b7d9"
+      },
+      "body_pos.csv": {
+        "bytes": 525943,
+        "sha256": "68bb96a50b8132bcd747c0ba75b2cda63875917843e61f876eb51d28357727d9"
+      },
+      "body_quat.csv": {
+        "bytes": 703510,
+        "sha256": "c3b5b5b06306713b95d9a0ba1a738d4f3f52fd6b5d9c78c3026a277302bf323f"
+      },
+      "conversion.json": {
+        "bytes": 2485,
+        "sha256": "b8b89c3a10a514ba9434ae83a64370953b5c42df1666c3c2f5b0f0b1ea2c6a24"
+      },
+      "joint_pos.csv": {
+        "bytes": 171347,
+        "sha256": "167bec760742c141489acbd082613e2ec356ca7a23a1023b4593930846da1ba7"
+      },
+      "joint_vel.csv": {
+        "bytes": 171244,
+        "sha256": "b20e90045723090747ff94349c6ea8d2b6e5a3fd4a3482226d2a6d8df3f91eef"
+      },
+      "metadata.txt": {
+        "bytes": 223,
+        "sha256": "4944d3253e58af34c2e984707fed540c0aa5332603708ba3b724bff352b081ab"
+      }
+    }
   },
   {
     "number": 25,
     "directory": "025__230412__dance_hiphop_kid_n_play_R_001__A312_M",
     "clip": "230412/dance_hiphop_kid_n_play_R_001__A312_M.csv",
-    "included": false,
+    "included": true,
     "source": "https://huggingface.co/datasets/bones-studio/seed",
-    "reason": "BONES-SEED prohibits public redistribution and mirrors",
-    "license_url": "https://bones.studio/info/seed-license"
+    "license_url": "https://bones.studio/info/seed-license",
+    "availability": "private internal-use copy",
+    "expected_files": {
+      "body_ang_vel.csv": {
+        "bytes": 621856,
+        "sha256": "d1805f8eb35adb7039ac305aace105c099053a1e1dc7350564c79ee779507d5e"
+      },
+      "body_lin_vel.csv": {
+        "bytes": 623186,
+        "sha256": "ff24ad90b414f8d69dbe2701aaf3b0d50ac6bd8aacec4349f6b95e867317409e"
+      },
+      "body_pos.csv": {
+        "bytes": 618302,
+        "sha256": "0096327af5d3fd68f3c5273fbb12ff0a88df4996ef8a16184451a7f1512ab3f8"
+      },
+      "body_quat.csv": {
+        "bytes": 823791,
+        "sha256": "4cb960c323fba8f52b2e937ad951bcc82433b77951288577c187edeff2224cc8"
+      },
+      "conversion.json": {
+        "bytes": 2479,
+        "sha256": "68483e0ce74293cda6e432e5c367b75fe4c21bc78b5dcd552881344ed8c9b393"
+      },
+      "joint_pos.csv": {
+        "bytes": 199307,
+        "sha256": "28be92dfc63f48f78bea1aef2caca7f0f1a7ad80563a49655590aa23279c0254"
+      },
+      "joint_vel.csv": {
+        "bytes": 200432,
+        "sha256": "18c9df67e4ab8419cba6f05d568db58349b685104e51c53fd02d5ace502f2d77"
+      },
+      "metadata.txt": {
+        "bytes": 216,
+        "sha256": "bfa968ba0125612bf2edb30f2ce78e7c228f5e6884e5db7a2c85213171215ecf"
+      }
+    }
   },
   {
     "number": 26,
     "directory": "026__230412__dance_latino_chase_mambo_R_fast_001__A314",
     "clip": "230412/dance_latino_chase_mambo_R_fast_001__A314.csv",
-    "included": false,
+    "included": true,
     "source": "https://huggingface.co/datasets/bones-studio/seed",
-    "reason": "BONES-SEED prohibits public redistribution and mirrors",
-    "license_url": "https://bones.studio/info/seed-license"
+    "license_url": "https://bones.studio/info/seed-license",
+    "availability": "private internal-use copy",
+    "expected_files": {
+      "body_ang_vel.csv": {
+        "bytes": 477253,
+        "sha256": "9dece30f084ce9efb39a7a71a30c2d1324cad1bb2cb89def6260e0c1e7ce44ea"
+      },
+      "body_lin_vel.csv": {
+        "bytes": 477574,
+        "sha256": "9e9de3202037aff47233d8ab9bab275e4588c22d1a6acb28d20417fde7b869d5"
+      },
+      "body_pos.csv": {
+        "bytes": 477150,
+        "sha256": "abb162bd3e9bfe05885fcbf38efba27050808dd0a6861556634f71c927879935"
+      },
+      "body_quat.csv": {
+        "bytes": 633160,
+        "sha256": "eedafd164811cf1d65178c1b844d4530f4f5910400c891745b38a745abb950bb"
+      },
+      "conversion.json": {
+        "bytes": 2482,
+        "sha256": "a3d569fbfb402ec1b83506d9e1b4778195d4d7b8a467dd63265bd2ce40241583"
+      },
+      "joint_pos.csv": {
+        "bytes": 153441,
+        "sha256": "d31f557e152e8eee632319761510b414afead3a725cb9e492d41372e38d702fb"
+      },
+      "joint_vel.csv": {
+        "bytes": 153632,
+        "sha256": "f3ea16ca905f5071259b2c380ce0346ebf23f63b52441742813a972f96376724"
+      },
+      "metadata.txt": {
+        "bytes": 220,
+        "sha256": "70e4d89f7fd8e01731c7040eec0b62dd3fd4f5f76779e1b9d05276e016886c89"
+      }
+    }
   },
   {
     "number": 27,
     "directory": "027__230412__dance_latino_mambo_180_mambo_360_R_001__A313",
     "clip": "230412/dance_latino_mambo_180_mambo_360_R_001__A313.csv",
-    "included": false,
+    "included": true,
     "source": "https://huggingface.co/datasets/bones-studio/seed",
-    "reason": "BONES-SEED prohibits public redistribution and mirrors",
-    "license_url": "https://bones.studio/info/seed-license"
+    "license_url": "https://bones.studio/info/seed-license",
+    "availability": "private internal-use copy",
+    "expected_files": {
+      "body_ang_vel.csv": {
+        "bytes": 523853,
+        "sha256": "972040f91716481a3790b36a97e5e1c69238ead5afaa4555b94b3371d1befeb2"
+      },
+      "body_lin_vel.csv": {
+        "bytes": 525000,
+        "sha256": "dcca691f22130ff782212fc59ecbee9730b117d6faa9c3d6aeadefaf507c3239"
+      },
+      "body_pos.csv": {
+        "bytes": 520798,
+        "sha256": "f305ec77853d87cf57e3290a16d2b53382da7b9bea31d3ab249a33c0ca0f34da"
+      },
+      "body_quat.csv": {
+        "bytes": 696476,
+        "sha256": "e7feef21ac97b1193c602ea10cc993fb326bf350a5381ea60ed2cc5b46411a06"
+      },
+      "conversion.json": {
+        "bytes": 2486,
+        "sha256": "62168a11f062ec24a07cef4b735621e2124a6df3884f9d15a14a0ecf9fcfaf97"
+      },
+      "joint_pos.csv": {
+        "bytes": 168961,
+        "sha256": "379e3a7153dd62143a8e3e32d1a16a1a4eb27ed882ab44d584c2459431805e92"
+      },
+      "joint_vel.csv": {
+        "bytes": 168928,
+        "sha256": "e455b4ae62a5c3a934e02b113082e1f579b47c4b0775e613c4b1ebd74593ea1f"
+      },
+      "metadata.txt": {
+        "bytes": 223,
+        "sha256": "0169aecde31c6d15053113edd542411c66408f1434ae6ea52569207a3bfd08ab"
+      }
+    }
   },
   {
     "number": 28,
     "directory": "028__230412__dance_hiphop_floss_R_002__A312_M",
     "clip": "230412/dance_hiphop_floss_R_002__A312_M.csv",
-    "included": false,
+    "included": true,
     "source": "https://huggingface.co/datasets/bones-studio/seed",
-    "reason": "BONES-SEED prohibits public redistribution and mirrors",
-    "license_url": "https://bones.studio/info/seed-license"
+    "license_url": "https://bones.studio/info/seed-license",
+    "availability": "private internal-use copy",
+    "expected_files": {
+      "body_ang_vel.csv": {
+        "bytes": 429766,
+        "sha256": "b5d1b727d86dcad12a46c6e3e071319dbdcfbce1fc8af4280c3f4893a5147579"
+      },
+      "body_lin_vel.csv": {
+        "bytes": 428834,
+        "sha256": "14f2e13cb2fb35e1d0f8e2ecbf36380ffc53a55e357cbd0f1b76b3a0bab456fd"
+      },
+      "body_pos.csv": {
+        "bytes": 419420,
+        "sha256": "20613fefe94cb26d707dca12ccb496d1196ca14d4c47b3c594df329909b72388"
+      },
+      "body_quat.csv": {
+        "bytes": 568771,
+        "sha256": "8af1c7dc67ca607251f6052a61ce0c2eba8b70697035c34863283b7cac348c51"
+      },
+      "conversion.json": {
+        "bytes": 2472,
+        "sha256": "526b9e7078ef6463ced822c3ebd6f0d4341adf6ccdd302fdf2dd8e719cc68848"
+      },
+      "joint_pos.csv": {
+        "bytes": 137301,
+        "sha256": "d25e0b4d9ecf36cd1d7f64bac120aac357981057e024637460b0e06ab55100a4"
+      },
+      "joint_vel.csv": {
+        "bytes": 138033,
+        "sha256": "0b1630a1118c3e8f29c50e4e992f2dcda6b900fba356761052bfedbdbb95f36a"
+      },
+      "metadata.txt": {
+        "bytes": 211,
+        "sha256": "b31aca3ab38ef5653a56a55adab420d5db00fcf46ec850b7f4c4351152b14853"
+      }
+    }
   },
   {
     "number": 29,
     "directory": "029__240327__moonwalk_R_001__A533",
     "clip": "240327/moonwalk_R_001__A533.csv",
-    "included": false,
+    "included": true,
     "source": "https://huggingface.co/datasets/bones-studio/seed",
-    "reason": "BONES-SEED prohibits public redistribution and mirrors",
-    "license_url": "https://bones.studio/info/seed-license"
+    "license_url": "https://bones.studio/info/seed-license",
+    "availability": "private internal-use copy",
+    "expected_files": {
+      "body_ang_vel.csv": {
+        "bytes": 406906,
+        "sha256": "3e4ada418f0f477e491d72e51fd0856e64eebcab83b677bcc9b61f87548488ef"
+      },
+      "body_lin_vel.csv": {
+        "bytes": 402792,
+        "sha256": "d62aa0275e2ad5b76563f055af8dd120c66c4b0337c34739f99450c73b220026"
+      },
+      "body_pos.csv": {
+        "bytes": 394530,
+        "sha256": "014971268370f472a06f7ddc37d4c33c5630945d8061c30f59b87c9c0e91733c"
+      },
+      "body_quat.csv": {
+        "bytes": 540723,
+        "sha256": "1cdd8c1ace2433fb7084793eb779f99af34243195923b2e3eb13321370ad527a"
+      },
+      "conversion.json": {
+        "bytes": 2460,
+        "sha256": "69101a2da18d0256d6b65163bd9edccdbe96e5ecdc514602653025eed57fbc07"
+      },
+      "joint_pos.csv": {
+        "bytes": 130777,
+        "sha256": "7d120d479626c782766d046a10aded32878662f1f8ee986a3ada02917e3aac6d"
+      },
+      "joint_vel.csv": {
+        "bytes": 131314,
+        "sha256": "d2475ebdbe2459d7dcf047c3a3a2102b2bde315bfba607a2da7ef1646a721def"
+      },
+      "metadata.txt": {
+        "bytes": 199,
+        "sha256": "e56eb250b4a88a5f2d09b686e0a535c4571083978fbe60b836ec93a28f333310"
+      }
+    }
   }
 ]
