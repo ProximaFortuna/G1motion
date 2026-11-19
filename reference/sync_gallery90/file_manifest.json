@@ -107,78 +107,6 @@
     "bytes": 2579,
     "sha256": "72a15b844548b595dec1fe4412c4e8acfa9ae0d4a0fbd873de789b44c11a6f03"
   },
-  "039__dance__B_StretchDance__retarget__B_StretchDance/joint_pos.csv": {
-    "bytes": 1010407,
-    "sha256": "ed272e1fe02a258af77fc21a56588b9dcc1b394c0274ed2260f152571a3f5b01"
-  },
-  "039__dance__B_StretchDance__retarget__B_StretchDance/joint_vel.csv": {
-    "bytes": 1012986,
-    "sha256": "a8636914976d644216ce8b7b1f4e3667a608c5c5b9142d4ce6224dc9ae345bb7"
-  },
-  "039__dance__B_StretchDance__retarget__B_StretchDance/body_pos.csv": {
-    "bytes": 3135840,
-    "sha256": "a4fd64fdd4d71f2bc10568369399d18a85975c5d6e4feb2920b90d469e8c13a3"
-  },
-  "039__dance__B_StretchDance__retarget__B_StretchDance/body_quat.csv": {
-    "bytes": 4195660,
-    "sha256": "aac02ddc2eb951b2db3cdc461411da4fe24bab59394db7933827ea3b1576bf3d"
-  },
-  "039__dance__B_StretchDance__retarget__B_StretchDance/body_lin_vel.csv": {
-    "bytes": 3146766,
-    "sha256": "4a6df2c31b073f6a2c298c968318c57e8e87e384667686f5fc8aba08352b76ad"
-  },
-  "039__dance__B_StretchDance__retarget__B_StretchDance/body_ang_vel.csv": {
-    "bytes": 3149681,
-    "sha256": "b0fff0fba9e5692ec3feb919ed66bf5571bb22bf19edd21c1aeeaa96411bbf69"
-  },
-  "039__dance__B_StretchDance__retarget__B_StretchDance/metadata.txt": {
-    "bytes": 232,
-    "sha256": "21fc238d13b3f2bd45494a7aa36deefbe04028520612588defe765cf190dc71e"
-  },
-  "039__dance__B_StretchDance__retarget__B_StretchDance/padding.json": {
-    "bytes": 1806,
-    "sha256": "9cb1462747905dc1bc4c07423765cf5c5b0c3389b1cbb4c370e711d1dd085b9e"
-  },
-  "039__dance__B_StretchDance__retarget__B_StretchDance/conversion.json": {
-    "bytes": 2581,
-    "sha256": "8759ccafc08393760ab0a23daed9dda31c74e9d7be1d765a1b2774b3ed82ed5b"
-  },
-  "040__dance__B_WiggleDance__retarget__B_WiggleDance/joint_pos.csv": {
-    "bytes": 901715,
-    "sha256": "e47d9bff0c97ca970f04c590fdf79b1413b4c0e9d63d04ff047230ea731c15bc"
-  },
-  "040__dance__B_WiggleDance__retarget__B_WiggleDance/joint_vel.csv": {
-    "bytes": 908974,
-    "sha256": "6b7589f2f18fbd2d9367884cc53620a064af257c7e43e03c1e2c5f580e6fdcf6"
-  },
-  "040__dance__B_WiggleDance__retarget__B_WiggleDance/body_pos.csv": {
-    "bytes": 2795796,
-    "sha256": "e10763b3bf3fecd6ea9b69a661d15cdd1922921575bde0be843bee9eee962110"
-  },
-  "040__dance__B_WiggleDance__retarget__B_WiggleDance/body_quat.csv": {
-    "bytes": 3753701,
-    "sha256": "fae2d50a7c3ff14aabc9bf59e026fcc624134d7283dabe6ef97c58af16279c04"
-  },
-  "040__dance__B_WiggleDance__retarget__B_WiggleDance/body_lin_vel.csv": {
-    "bytes": 2819573,
-    "sha256": "04ff995c7c8d09c03c297b60a18af6370806875ae01777c16be47d8e0fd0e3f2"
-  },
-  "040__dance__B_WiggleDance__retarget__B_WiggleDance/body_ang_vel.csv": {
-    "bytes": 2822993,
-    "sha256": "fa94396dce40dc4fee18aaf0b112c0f34fad95f4dc015cc41e46217082189614"
-  },
-  "040__dance__B_WiggleDance__retarget__B_WiggleDance/metadata.txt": {
-    "bytes": 230,
-    "sha256": "8ad64f7fffa42c54341781f167ba2d9581b1fa79cad854557841454556659c35"
-  },
-  "040__dance__B_WiggleDance__retarget__B_WiggleDance/padding.json": {
-    "bytes": 1801,
-    "sha256": "7939053a4e1ac00f43066d12604efbcd006d72dbb5424fcbf05e2adc0d3b9e9e"
-  },
-  "040__dance__B_WiggleDance__retarget__B_WiggleDance/conversion.json": {
-    "bytes": 2578,
-    "sha256": "0856a8e8c75bb35d4873590d28460ac2ee886a911c3aea8a755dadf8bd3c3be9"
-  },
   "041__dance__J_Dance0_StepTouch__retarget__J_Dance0_StepTouch/joint_pos.csv": {
     "bytes": 817053,
     "sha256": "04944d8b7746025205f9468a008c8fa63c26b481a67190e6bc3ff189cad446fe"
@@ -287,42 +215,6 @@
     "bytes": 2590,
     "sha256": "4c0489e3d3eaeac9aa4fcf3f85df0388f9135d5ff3572959ea81d1892fae9ba9"
   },
-  "044__dance__J_Dance17_Shuffle__retarget__J_Dance17_Shuffle/joint_pos.csv": {
-    "bytes": 811369,
-    "sha256": "4a4ac19576f54d2d0f3159ff508a645b0da90d3aa4c09d91c4b2bdecdfe58a8b"
-  },
-  "044__dance__J_Dance17_Shuffle__retarget__J_Dance17_Shuffle/joint_vel.csv": {
-    "bytes": 812731,
-    "sha256": "37687c2d9c955cb7cfd350c54db6203dca5c471e825537aa241b0a177ee5aeb6"
-  },
-  "044__dance__J_Dance17_Shuffle__retarget__J_Dance17_Shuffle/body_pos.csv": {
-    "bytes": 2482629,
-    "sha256": "320e625faaaddffcf005d934bfd0f4e229fb19cd2046e9da3d77458b8040ff0c"
-  },
-  "044__dance__J_Dance17_Shuffle__retarget__J_Dance17_Shuffle/body_quat.csv": {
-    "bytes": 3372179,
-    "sha256": "8ab0f230861cd6510f494c7699a31bce808c040eba33bf960f531d761358b999"
-  },
-  "044__dance__J_Dance17_Shuffle__retarget__J_Dance17_Shuffle/body_lin_vel.csv": {
-    "bytes": 2527771,
-    "sha256": "311e6a3888003841bab776ecd6d641dcd9ab2d0e82358f0d2bad49378114cc1a"
-  },
-  "044__dance__J_Dance17_Shuffle__retarget__J_Dance17_Shuffle/body_ang_vel.csv": {
-    "bytes": 2522111,
-    "sha256": "58cd040bc84ff4190212d540541f08ecb99a30bb29cd2cb8dfd842eb7fef8d5a"
-  },
-  "044__dance__J_Dance17_Shuffle__retarget__J_Dance17_Shuffle/metadata.txt": {
-    "bytes": 238,
-    "sha256": "0d82712a9c3864d93eece812a9efa59f136980dff9b8df9557faf46667d399e6"
-  },
-  "044__dance__J_Dance17_Shuffle__retarget__J_Dance17_Shuffle/padding.json": {
-    "bytes": 1794,
-    "sha256": "efb54f4457af2ce7f39e8731359d6c766fc947a8b74facd54457f19ca8855fda"
-  },
-  "044__dance__J_Dance17_Shuffle__retarget__J_Dance17_Shuffle/conversion.json": {
-    "bytes": 2586,
-    "sha256": "8c30d3f2351ad0cf4e79a81c3d22fab3f60d53b475edc46fe386a50aeaa93f85"
-  },
   "045__dance__J_Dance18_TikTok__retarget__J_Dance18_TikTok/joint_pos.csv": {
     "bytes": 556600,
     "sha256": "f9098402954b43ba46ddb6c40e008b55fdbf44f1e420802faa9159133e05d64a"
@@ -394,78 +286,6 @@
   "046__dance__J_Dance19_LetsGO__retarget__J_Dance19_LetsGO/conversion.json": {
     "bytes": 2585,
     "sha256": "6a404b4c983874115dc4a3de5fda5d0f0caa48c9c73f40a59d92e500594fc2ff"
-  },
-  "047__dance__J_Dance1_Modern__retarget__J_Dance1_Modern/joint_pos.csv": {
-    "bytes": 912152,
-    "sha256": "83b770cf36b14ee0d9b6b2dc3155b56c61446ea23e6fbcddfb0c65a371ec8c6d"
-  },
-  "047__dance__J_Dance1_Modern__retarget__J_Dance1_Modern/joint_vel.csv": {
-    "bytes": 915865,
-    "sha256": "bd3f39c88ad295c9ea9de3d74f4eb2c5fd529e9552e2a382106432a251293f7f"
-  },
-  "047__dance__J_Dance1_Modern__retarget__J_Dance1_Modern/body_pos.csv": {
-    "bytes": 2846552,
-    "sha256": "3ad273dcac659df4649d469455347c7abf65bb204b1721554c3dc028de654315"
-  },
-  "047__dance__J_Dance1_Modern__retarget__J_Dance1_Modern/body_quat.csv": {
-    "bytes": 3791111,
-    "sha256": "ea825363c49fa185605a5ef89c62b2dfb1a1665d7d4bd07e0b94345d58d609c6"
-  },
-  "047__dance__J_Dance1_Modern__retarget__J_Dance1_Modern/body_lin_vel.csv": {
-    "bytes": 2848130,
-    "sha256": "344069b3a699c8a616d56a2e8e7ade36789afd5f68307d6ae629820e255385bd"
-  },
-  "047__dance__J_Dance1_Modern__retarget__J_Dance1_Modern/body_ang_vel.csv": {
-    "bytes": 2847764,
-    "sha256": "fe48262f44ae23e110837066f32ce00ac1f61515cfad6fbd1bcf0b679ae835f9"
-  },
-  "047__dance__J_Dance1_Modern__retarget__J_Dance1_Modern/metadata.txt": {
-    "bytes": 234,
-    "sha256": "3e08fea5fc96fcb712457a7723fb7f659d008b131eed6ba1ebee77635df277fd"
-  },
-  "047__dance__J_Dance1_Modern__retarget__J_Dance1_Modern/padding.json": {
-    "bytes": 1798,
-    "sha256": "8352e1b91a50190a7cf1b1ba7d58630ecc6b371b53576f084f2fbe3ac63e8c83"
-  },
-  "047__dance__J_Dance1_Modern__retarget__J_Dance1_Modern/conversion.json": {
-    "bytes": 2583,
-    "sha256": "e73a667cb8e381efcb1f61093d15bee89375505c6ee3ac0b75d5a4d296a0d53d"
-  },
-  "048__dance__J_Dance20_DWG__retarget__J_Dance20_DWG/joint_pos.csv": {
-    "bytes": 514411,
-    "sha256": "2b66acd9ae976e4623e8cda0d5c60fb9d851b18891e8347340aa234154a8c94c"
-  },
-  "048__dance__J_Dance20_DWG__retarget__J_Dance20_DWG/joint_vel.csv": {
-    "bytes": 516631,
-    "sha256": "22959d9b353d2b26c60979af2ae8dd9aa4bfea0d16eb445f54e147313a9b27db"
-  },
-  "048__dance__J_Dance20_DWG__retarget__J_Dance20_DWG/body_pos.csv": {
-    "bytes": 1592552,
-    "sha256": "a2ebfb845200882188822c469a3b01f5223bb073fd5ac9545724d589858ff2c4"
-  },
-  "048__dance__J_Dance20_DWG__retarget__J_Dance20_DWG/body_quat.csv": {
-    "bytes": 2145993,
-    "sha256": "7a3ace1977905bd41fc170d3ee0680491fce256821333f74d6fc5ce3e9289861"
-  },
-  "048__dance__J_Dance20_DWG__retarget__J_Dance20_DWG/body_lin_vel.csv": {
-    "bytes": 1604215,
-    "sha256": "2e4575a10d982ba8d859744d21f71ddfa2a191a147ecf6ce204ee26c070c3db8"
-  },
-  "048__dance__J_Dance20_DWG__retarget__J_Dance20_DWG/body_ang_vel.csv": {
-    "bytes": 1602827,
-    "sha256": "d568b83d8d55deaa7ce3bbe270bade9df4cecda5869f7816e6bfd044f518fe5e"
-  },
-  "048__dance__J_Dance20_DWG__retarget__J_Dance20_DWG/metadata.txt": {
-    "bytes": 230,
-    "sha256": "ac8d0b19e7e3b3469ff2fdc412c4ab0e6ddfb2d1f08ea6536a53ad1e0d7ce8e5"
-  },
-  "048__dance__J_Dance20_DWG__retarget__J_Dance20_DWG/padding.json": {
-    "bytes": 1788,
-    "sha256": "de4db71067d8e7af9e0a60025df652fe881bee8ac317dbc695b26e88612f7ace"
-  },
-  "048__dance__J_Dance20_DWG__retarget__J_Dance20_DWG/conversion.json": {
-    "bytes": 2577,
-    "sha256": "0e6f53c3ee660a2715220b684584a0441c03a3c4f1a87d26215c2cd596364dec"
   },
   "049__dance__J_Dance21_Blunt__retarget__J_Dance21_Blunt/joint_pos.csv": {
     "bytes": 751325,
@@ -719,42 +539,6 @@
     "bytes": 2578,
     "sha256": "0df2b911aafd8a2f5472050937f78f294e38eed24e607f84141086293f05a8db"
   },
-  "056__dance__J_Dance6_Sassy__retarget__J_Dance6_Sassy/joint_pos.csv": {
-    "bytes": 808777,
-    "sha256": "526ff8605009e32c399bbbac24f94182e26dd04947bee8146b765141f818f939"
-  },
-  "056__dance__J_Dance6_Sassy__retarget__J_Dance6_Sassy/joint_vel.csv": {
-    "bytes": 811320,
-    "sha256": "60cd5d527fe528f8ee7b4140c7b6f999a0779a0a8f584b59f1834835c178a26b"
-  },
-  "056__dance__J_Dance6_Sassy__retarget__J_Dance6_Sassy/body_pos.csv": {
-    "bytes": 2469202,
-    "sha256": "5cb1ff732e965de970e55b89429fac80723c076fdf7ec44ff7bae00a07211563"
-  },
-  "056__dance__J_Dance6_Sassy__retarget__J_Dance6_Sassy/body_quat.csv": {
-    "bytes": 3358572,
-    "sha256": "92013c02e4dfcbe097c49b0fc2b27a1a66b6ec1cd9bbcd32f151b3eaa9ab11a7"
-  },
-  "056__dance__J_Dance6_Sassy__retarget__J_Dance6_Sassy/body_lin_vel.csv": {
-    "bytes": 2521435,
-    "sha256": "e627fbadc98ad67bbb70c4622665b2fb12d746d892030027e187801a43f2a668"
-  },
-  "056__dance__J_Dance6_Sassy__retarget__J_Dance6_Sassy/body_ang_vel.csv": {
-    "bytes": 2521157,
-    "sha256": "186b81192e841735c9ac88fe6f193061144264a1e3ed471bc83b16acdf9ae625"
-  },
-  "056__dance__J_Dance6_Sassy__retarget__J_Dance6_Sassy/metadata.txt": {
-    "bytes": 232,
-    "sha256": "227bab6b2e0df69f7ebde124c23a16a340eb231002364c3c6a9ba9a4e8dd78cf"
-  },
-  "056__dance__J_Dance6_Sassy__retarget__J_Dance6_Sassy/padding.json": {
-    "bytes": 1792,
-    "sha256": "3e8f2b2d3cf7d03466fb130350293bcaa6351c01f80d9265c05b6712b8cd68b8"
-  },
-  "056__dance__J_Dance6_Sassy__retarget__J_Dance6_Sassy/conversion.json": {
-    "bytes": 2581,
-    "sha256": "46f454be45934a4649a0594373d6c08a70da34ee49d0c6d6fe2f28e2e052b4b1"
-  },
   "057__dance__J_Dance7_Party__retarget__J_Dance7_Party/joint_pos.csv": {
     "bytes": 1068353,
     "sha256": "951542f59024bcb7f2d02555d87b859425d0dfb1aa2ee607211ce635ab3eae54"
@@ -970,41 +754,5 @@
   "062__dance__J_ShortDance15_Nineties__retarget__J_ShortDance15_Nineties/conversion.json": {
     "bytes": 2597,
     "sha256": "ec1a20ef3d6a63f8a87361e838f841644410bfd308b903812b3abcd0a1da087c"
-  },
-  "063__dance__J_ShortDance16_JazzWalk__retarget__J_ShortDance16_JazzWalk/joint_pos.csv": {
-    "bytes": 423851,
-    "sha256": "19d3a96fdca4c06a5ba4173284c9e99de082c63533200e190c27baab160496e9"
-  },
-  "063__dance__J_ShortDance16_JazzWalk__retarget__J_ShortDance16_JazzWalk/joint_vel.csv": {
-    "bytes": 425352,
-    "sha256": "cf17f4f845394261db3d90531747919ffec92c9885b7ebd288d8eddbdf00a6e4"
-  },
-  "063__dance__J_ShortDance16_JazzWalk__retarget__J_ShortDance16_JazzWalk/body_pos.csv": {
-    "bytes": 1303140,
-    "sha256": "6c037b42685a47d3ebfa8c843de7c658b352574ff56c11674663ca1005cdefd0"
-  },
-  "063__dance__J_ShortDance16_JazzWalk__retarget__J_ShortDance16_JazzWalk/body_quat.csv": {
-    "bytes": 1766263,
-    "sha256": "e195d6a7cc0488106eef7e8cd027e4193908eaef9828bd00988ee8c38bcfe0fd"
-  },
-  "063__dance__J_ShortDance16_JazzWalk__retarget__J_ShortDance16_JazzWalk/body_lin_vel.csv": {
-    "bytes": 1322029,
-    "sha256": "bab7cef6e26b081d40fb4f2cc6a6813d5478b304fb27135a6c9dd8e495cc5020"
-  },
-  "063__dance__J_ShortDance16_JazzWalk__retarget__J_ShortDance16_JazzWalk/body_ang_vel.csv": {
-    "bytes": 1320719,
-    "sha256": "86f94ab44e54495da4d92cdf98f5d9854a812fb6320a141754c794fe82c86415"
-  },
-  "063__dance__J_ShortDance16_JazzWalk__retarget__J_ShortDance16_JazzWalk/metadata.txt": {
-    "bytes": 250,
-    "sha256": "092e1ff148f2b7dcd0fec52e1a5bcb2703fcc618dac8697bd1030fa1570e519f"
-  },
-  "063__dance__J_ShortDance16_JazzWalk__retarget__J_ShortDance16_JazzWalk/padding.json": {
-    "bytes": 1808,
-    "sha256": "7b33c388ddbf88e3372238c4c168e7c0531649a26403977ea739e4ce66b8fa25"
-  },
-  "063__dance__J_ShortDance16_JazzWalk__retarget__J_ShortDance16_JazzWalk/conversion.json": {
-    "bytes": 2596,
-    "sha256": "00dcc3edab9da1ba8613c25a5b8df9ba7f035b4365edd2637b0a1b7ce6e53565"
   }
 }

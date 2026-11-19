@@ -2,7 +2,7 @@
 
 Motion conversion, SONIC reference data, and two-G1 synchronization experiments.
 
-- [Numbered motion library](reference/sync_gallery90/README.md): 28 padded G1 Moves dances, preserving IDs 036–063, plus pinned source information for Macarena (000) and the BONES selection (001–029).
+- [Numbered motion library](reference/sync_gallery90/README.md): 21 padded G1 Moves dances with their original gallery IDs preserved, plus pinned source information for Macarena (000) and the BONES selection (001–029).
 - [System documentation](docs/G1_MOTION_SYSTEM_DOCUMENTATION.md): conversion tools, deployment configuration, synchronization prototype, and validation limits.
 - `converted/` contains the earlier conversions; `repaired/` contains the experimental Salsa repair. The numbered padded references are in `reference/sync_gallery90/`.
 
