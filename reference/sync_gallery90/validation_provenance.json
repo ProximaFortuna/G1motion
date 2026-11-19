@@ -20,10 +20,11 @@
       "sha256": "466d05947c78af6c76388adfb86e3a2a77b2a1d921a64883ed3d085ebf58de1b"
     }
   },
-  "full_sequence_completed": 27,
+  "full_sequence_completed": 20,
   "fell": 1,
   "failed_number": 57,
   "native_reader_validation": "All exported motion arrays loaded with the existing SONIC C++ motion-data reader",
   "data_integrity": "All six CSV arrays per clip and metadata.txt byte-identical to the prepared library; provenance JSON paths replaced with public source identifiers",
-  "limitations": "One nominal trial per clip; simulation completion does not establish hardware safety or robust tracking"
+  "limitations": "One nominal trial per clip; simulation completion does not establish hardware safety or robust tracking",
+  "included_motion_count": 21
 }

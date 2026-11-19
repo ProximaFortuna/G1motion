@@ -1,6 +1,6 @@
 # Numbered SONIC motion references
 
-This directory contains the 28 padded **G1 Moves dance** references numbered **036–063** (377,109,900 bytes of per-motion files before LFS storage). The IDs match the original motion gallery. Karate and bonus clips are excluded; the numbering gaps are intentional. These references are separate from the earlier unpadded `converted/` data.
+This directory contains the 21 padded **G1 Moves dance** references listed below (293,704,683 bytes of per-motion files before LFS storage). The IDs match the original motion gallery. Karate and bonus clips are excluded; the numbering gaps are intentional. These references are separate from the earlier unpadded `converted/` data.
 
 **Macarena (000)** is recorded in [`external_sources.json`](external_sources.json), with a pinned [original SONIC sample](https://github.com/NVlabs/GR00T-WholeBodyControl/tree/1fa5f7fa3966cbd4845c4e641d13c3f0cd5b0d9b/gear_sonic_deploy/reference/example/macarena_001__A545) and SHA-256 checksums for all eight files. The known baseline is unchanged: 1,375 frames at 50 Hz, 29 joints, and 14 body channels. Its trajectory files are linked at their original source rather than mirrored here because a separate motion-data redistribution license was not identified. To assemble a local combined library, use that sample or your existing matching baseline under `000__macarena_001__A545/`.
 
@@ -17,7 +17,7 @@ cd G1motion
 git lfs pull --include='reference/sync_gallery90/*/*.csv'
 ```
 
-A GitHub source ZIP may contain LFS pointer text instead of the arrays. `file_manifest.json` lists the byte count and SHA-256 of every per-motion file after LFS retrieval. `playlist.json` and `playlist.csv` describe the 28 included clips; external motions are listed separately so missing trajectories cannot be mistaken for installed references.
+A GitHub source ZIP may contain LFS pointer text instead of the arrays. `file_manifest.json` lists the byte count and SHA-256 of every per-motion file after LFS retrieval. `playlist.json` and `playlist.csv` describe the 21 included clips; external motions are listed separately so missing trajectories cannot be mistaken for installed references.
 
 ## Padding and format
 
@@ -53,23 +53,18 @@ This is reference data for an existing SONIC deployment. Installing it does not 
 
 All references loaded through the existing SONIC C++ CSV reader. Each padded dance was evaluated once in MuJoCo from neutral with the installed G1 release encoder/decoder, original gains, and residual disabled. No physical assistance or state resets followed initialization. Controller file hashes and evaluation conditions are recorded in [`validation_provenance.json`](validation_provenance.json); no controller weights or SONIC code are included in this addition.
 
-**27 of 28 trials completed. `057 J_Dance7_Party` fell at 32.06 seconds during the dance and remains included.** [`simulation_results.json`](simulation_results.json) preserves every trial result. These are nominal simulation results, not hardware validation or evidence of robust tracking. The reviewed Dad Dance trial and its exact CSVs are retained.
+**20 of 21 included trials completed. `057 J_Dance7_Party` fell at 32.06 seconds during the dance and remains included.** [`simulation_results.json`](simulation_results.json) preserves every trial result. These are nominal simulation results, not hardware validation or evidence of robust tracking. The reviewed Dad Dance trial and its exact CSVs are retained.
 
 | ID | Motion | Padded timeline (s) | Release-controller simulation |
 | --- | --- | ---: | --- |
 | 036 | B_DadDance | 54.80 | completed |
 | 037 | B_LongDance | 132.42 | completed |
 | 038 | B_SpiralDance | 60.78 | completed |
-| 039 | B_StretchDance | 56.08 | completed |
-| 040 | B_WiggleDance | 50.26 | completed |
 | 041 | J_Dance0_StepTouch | 45.46 | completed |
 | 042 | J_Dance11_Gnarly | 58.12 | completed |
 | 043 | J_Dance12_LushLife | 48.58 | completed |
-| 044 | J_Dance17_Shuffle | 45.00 | completed |
 | 045 | J_Dance18_TikTok | 30.92 | completed |
 | 046 | J_Dance19_LetsGO | 37.82 | completed |
-| 047 | J_Dance1_Modern | 50.72 | completed |
-| 048 | J_Dance20_DWG | 28.60 | completed |
 | 049 | J_Dance21_Blunt | 41.72 | completed |
 | 050 | J_Dance22_Thrilling | 39.96 | completed |
 | 051 | J_Dance23_MidnightSun | 61.56 | completed |
@@ -77,14 +72,12 @@ All references loaded through the existing SONIC C++ CSV reader. Each padded dan
 | 053 | J_Dance3_Woah | 42.98 | completed |
 | 054 | J_Dance4_Broadway | 40.92 | completed |
 | 055 | J_Dance5_Hype | 44.58 | completed |
-| 056 | J_Dance6_Sassy | 44.88 | completed |
 | 057 | J_Dance7_Party | 59.20 | fell at 32.06 s |
 | 058 | J_Dance8_WestCoast | 52.90 | completed |
 | 059 | J_Dance9_PeaceMaker | 71.32 | completed |
 | 060 | J_ShortDance13_SingleLadies | 27.00 | completed |
 | 061 | J_ShortDance14_Disco | 27.28 | completed |
 | 062 | J_ShortDance15_Nineties | 26.10 | completed |
-| 063 | J_ShortDance16_JazzWalk | 23.60 | completed |
 
 ## Sources and licenses
 
