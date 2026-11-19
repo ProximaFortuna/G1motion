@@ -1,0 +1,306 @@
+[
+  {
+    "number": 0,
+    "directory": "000__macarena_001__A545",
+    "clip": "macarena_001__A545",
+    "included": false,
+    "source": "https://github.com/NVlabs/GR00T-WholeBodyControl/tree/1fa5f7fa3966cbd4845c4e641d13c3f0cd5b0d9b/gear_sonic_deploy/reference/example/macarena_001__A545",
+    "reason": "Link to original SONIC sample; no separate motion-data redistribution license identified",
+    "license_url": "https://github.com/NVlabs/GR00T-WholeBodyControl/blob/1fa5f7fa3966cbd4845c4e641d13c3f0cd5b0d9b/LICENSE",
+    "expected_files": {
+      "body_ang_vel.csv": {
+        "bytes": 549203,
+        "sha256": "365ff87303477c486c48e686c784d3d34916412a773df4a4e99c2cd4c6c19668"
+      },
+      "body_lin_vel.csv": {
+        "bytes": 549152,
+        "sha256": "a49b30041cdf177a9f280388e17b281fbd9b8ea6c7cff0e598df7b6a58e472cb"
+      },
+      "body_pos.csv": {
+        "bytes": 539165,
+        "sha256": "9c3b3d37759a6d647ece48fb2ee83a672804aace61a465be1ecffda9dc0a9ec7"
+      },
+      "body_quat.csv": {
+        "bytes": 724208,
+        "sha256": "b8b12818a64405764dee8035f84948a5d9db55332576065f79cd79962a99375d"
+      },
+      "info.txt": {
+        "bytes": 1234,
+        "sha256": "e503ce33651f079fd184b0046b3b51741025e7a690e53d28ded6c8d94e720adc"
+      },
+      "joint_pos.csv": {
+        "bytes": 378610,
+        "sha256": "c5d3346b84d18f654d41119f77b3c22158222a0ed8e0cfdd5d1e365cd2f928bc"
+      },
+      "joint_vel.csv": {
+        "bytes": 378310,
+        "sha256": "a253beca302630400e4f94d92e2af7fb0d8492b13dc202f9f23941b35dfbde66"
+      },
+      "metadata.txt": {
+        "bytes": 463,
+        "sha256": "18ab95c70b1ec9ac221b387e2508999cc81c2572ca5f537d273884ad6454c357"
+      }
+    }
+  },
+  {
+    "number": 1,
+    "directory": "001__230124__egypt_dance_R_002__A140",
+    "clip": "230124/egypt_dance_R_002__A140.csv",
+    "included": false,
+    "source": "https://huggingface.co/datasets/bones-studio/seed",
+    "reason": "BONES-SEED prohibits public redistribution and mirrors",
+    "license_url": "https://bones.studio/info/seed-license"
+  },
+  {
+    "number": 2,
+    "directory": "002__230411__dance_basic_fourth_entry_position_R_002__A308_M",
+    "clip": "230411/dance_basic_fourth_entry_position_R_002__A308_M.csv",
+    "included": false,
+    "source": "https://huggingface.co/datasets/bones-studio/seed",
+    "reason": "BONES-SEED prohibits public redistribution and mirrors",
+    "license_url": "https://bones.studio/info/seed-license"
+  },
+  {
+    "number": 3,
+    "directory": "003__230411__dance_basic_head_accent_R_fast_001__A308",
+    "clip": "230411/dance_basic_head_accent_R_fast_001__A308.csv",
+    "included": false,
+    "source": "https://huggingface.co/datasets/bones-studio/seed",
+    "reason": "BONES-SEED prohibits public redistribution and mirrors",
+    "license_url": "https://bones.studio/info/seed-license"
+  },
+  {
+    "number": 4,
+    "directory": "004__230411__dance_retro_clap_step_R_003__A310",
+    "clip": "230411/dance_retro_clap_step_R_003__A310.csv",
+    "included": false,
+    "source": "https://huggingface.co/datasets/bones-studio/seed",
+    "reason": "BONES-SEED prohibits public redistribution and mirrors",
+    "license_url": "https://bones.studio/info/seed-license"
+  },
+  {
+    "number": 5,
+    "directory": "005__230411__dance_retro_clap_step_variation_R_002__A306",
+    "clip": "230411/dance_retro_clap_step_variation_R_002__A306.csv",
+    "included": false,
+    "source": "https://huggingface.co/datasets/bones-studio/seed",
+    "reason": "BONES-SEED prohibits public redistribution and mirrors",
+    "license_url": "https://bones.studio/info/seed-license"
+  },
+  {
+    "number": 6,
+    "directory": "006__230411__dance_retro_disco_finger_down_up_R_002__A306_M",
+    "clip": "230411/dance_retro_disco_finger_down_up_R_002__A306_M.csv",
+    "included": false,
+    "source": "https://huggingface.co/datasets/bones-studio/seed",
+    "reason": "BONES-SEED prohibits public redistribution and mirrors",
+    "license_url": "https://bones.studio/info/seed-license"
+  },
+  {
+    "number": 7,
+    "directory": "007__230411__dance_retro_disco_finger_horizontal_R_002__A307",
+    "clip": "230411/dance_retro_disco_finger_horizontal_R_002__A307.csv",
+    "included": false,
+    "source": "https://huggingface.co/datasets/bones-studio/seed",
+    "reason": "BONES-SEED prohibits public redistribution and mirrors",
+    "license_url": "https://bones.studio/info/seed-license"
+  },
+  {
+    "number": 8,
+    "directory": "008__230411__victory_dance_brick_brick_slide_slide_R_002__A308",
+    "clip": "230411/victory_dance_brick_brick_slide_slide_R_002__A308.csv",
+    "included": false,
+    "source": "https://huggingface.co/datasets/bones-studio/seed",
+    "reason": "BONES-SEED prohibits public redistribution and mirrors",
+    "license_url": "https://bones.studio/info/seed-license"
+  },
+  {
+    "number": 9,
+    "directory": "009__230411__victory_dance_robot_dance_180_R_003__A306",
+    "clip": "230411/victory_dance_robot_dance_180_R_003__A306.csv",
+    "included": false,
+    "source": "https://huggingface.co/datasets/bones-studio/seed",
+    "reason": "BONES-SEED prohibits public redistribution and mirrors",
+    "license_url": "https://bones.studio/info/seed-license"
+  },
+  {
+    "number": 10,
+    "directory": "010__230411__victory_dance_robot_dance_180_R_003__A310_M",
+    "clip": "230411/victory_dance_robot_dance_180_R_003__A310_M.csv",
+    "included": false,
+    "source": "https://huggingface.co/datasets/bones-studio/seed",
+    "reason": "BONES-SEED prohibits public redistribution and mirrors",
+    "license_url": "https://bones.studio/info/seed-license"
+  },
+  {
+    "number": 11,
+    "directory": "011__230411__dance_retro_charleston_jump_R_001__A309_M",
+    "clip": "230411/dance_retro_charleston_jump_R_001__A309_M.csv",
+    "included": false,
+    "source": "https://huggingface.co/datasets/bones-studio/seed",
+    "reason": "BONES-SEED prohibits public redistribution and mirrors",
+    "license_url": "https://bones.studio/info/seed-license"
+  },
+  {
+    "number": 12,
+    "directory": "012__230411__dance_basic_padeburee_R_fast_002__A307",
+    "clip": "230411/dance_basic_padeburee_R_fast_002__A307.csv",
+    "included": false,
+    "source": "https://huggingface.co/datasets/bones-studio/seed",
+    "reason": "BONES-SEED prohibits public redistribution and mirrors",
+    "license_url": "https://bones.studio/info/seed-license"
+  },
+  {
+    "number": 13,
+    "directory": "013__230411__victory_dance_orange_justice_180_R_001__A309",
+    "clip": "230411/victory_dance_orange_justice_180_R_001__A309.csv",
+    "included": false,
+    "source": "https://huggingface.co/datasets/bones-studio/seed",
+    "reason": "BONES-SEED prohibits public redistribution and mirrors",
+    "license_url": "https://bones.studio/info/seed-license"
+  },
+  {
+    "number": 14,
+    "directory": "014__230411__victory_dance_ymca_R_002__A308",
+    "clip": "230411/victory_dance_ymca_R_002__A308.csv",
+    "included": false,
+    "source": "https://huggingface.co/datasets/bones-studio/seed",
+    "reason": "BONES-SEED prohibits public redistribution and mirrors",
+    "license_url": "https://bones.studio/info/seed-license"
+  },
+  {
+    "number": 15,
+    "directory": "015__230412__dance_hiphop_flintstones_kick_ball_change_R_003__A312",
+    "clip": "230412/dance_hiphop_flintstones_kick_ball_change_R_003__A312.csv",
+    "included": false,
+    "source": "https://huggingface.co/datasets/bones-studio/seed",
+    "reason": "BONES-SEED prohibits public redistribution and mirrors",
+    "license_url": "https://bones.studio/info/seed-license"
+  },
+  {
+    "number": 16,
+    "directory": "016__230412__dance_hiphop_2_step_270_R_002__A311",
+    "clip": "230412/dance_hiphop_2_step_270_R_002__A311.csv",
+    "included": false,
+    "source": "https://huggingface.co/datasets/bones-studio/seed",
+    "reason": "BONES-SEED prohibits public redistribution and mirrors",
+    "license_url": "https://bones.studio/info/seed-license"
+  },
+  {
+    "number": 17,
+    "directory": "017__230412__dance_hiphop_2_step_270_R_003__A311",
+    "clip": "230412/dance_hiphop_2_step_270_R_003__A311.csv",
+    "included": false,
+    "source": "https://huggingface.co/datasets/bones-studio/seed",
+    "reason": "BONES-SEED prohibits public redistribution and mirrors",
+    "license_url": "https://bones.studio/info/seed-license"
+  },
+  {
+    "number": 18,
+    "directory": "018__230412__dance_hiphop_alt_stump_R_003__A313",
+    "clip": "230412/dance_hiphop_alt_stump_R_003__A313.csv",
+    "included": false,
+    "source": "https://huggingface.co/datasets/bones-studio/seed",
+    "reason": "BONES-SEED prohibits public redistribution and mirrors",
+    "license_url": "https://bones.studio/info/seed-license"
+  },
+  {
+    "number": 19,
+    "directory": "019__230412__dance_hiphop_bart_simpson_R_001__A311_M",
+    "clip": "230412/dance_hiphop_bart_simpson_R_001__A311_M.csv",
+    "included": false,
+    "source": "https://huggingface.co/datasets/bones-studio/seed",
+    "reason": "BONES-SEED prohibits public redistribution and mirrors",
+    "license_url": "https://bones.studio/info/seed-license"
+  },
+  {
+    "number": 20,
+    "directory": "020__230412__dance_hiphop_bounce_180_R_002__A313",
+    "clip": "230412/dance_hiphop_bounce_180_R_002__A313.csv",
+    "included": false,
+    "source": "https://huggingface.co/datasets/bones-studio/seed",
+    "reason": "BONES-SEED prohibits public redistribution and mirrors",
+    "license_url": "https://bones.studio/info/seed-license"
+  },
+  {
+    "number": 21,
+    "directory": "021__230412__dance_hiphop_bounce_to_feed_R_002__A314_M",
+    "clip": "230412/dance_hiphop_bounce_to_feed_R_002__A314_M.csv",
+    "included": false,
+    "source": "https://huggingface.co/datasets/bones-studio/seed",
+    "reason": "BONES-SEED prohibits public redistribution and mirrors",
+    "license_url": "https://bones.studio/info/seed-license"
+  },
+  {
+    "number": 22,
+    "directory": "022__230412__dance_hiphop_cabath_path_R_001__A312",
+    "clip": "230412/dance_hiphop_cabath_path_R_001__A312.csv",
+    "included": false,
+    "source": "https://huggingface.co/datasets/bones-studio/seed",
+    "reason": "BONES-SEED prohibits public redistribution and mirrors",
+    "license_url": "https://bones.studio/info/seed-license"
+  },
+  {
+    "number": 23,
+    "directory": "023__230412__dance_hiphop_happy_feet_R_001__A313_M",
+    "clip": "230412/dance_hiphop_happy_feet_R_001__A313_M.csv",
+    "included": false,
+    "source": "https://huggingface.co/datasets/bones-studio/seed",
+    "reason": "BONES-SEED prohibits public redistribution and mirrors",
+    "license_url": "https://bones.studio/info/seed-license"
+  },
+  {
+    "number": 24,
+    "directory": "024__230412__dance_hiphop_kick_it_variation_R_002__A315_M",
+    "clip": "230412/dance_hiphop_kick_it_variation_R_002__A315_M.csv",
+    "included": false,
+    "source": "https://huggingface.co/datasets/bones-studio/seed",
+    "reason": "BONES-SEED prohibits public redistribution and mirrors",
+    "license_url": "https://bones.studio/info/seed-license"
+  },
+  {
+    "number": 25,
+    "directory": "025__230412__dance_hiphop_kid_n_play_R_001__A312_M",
+    "clip": "230412/dance_hiphop_kid_n_play_R_001__A312_M.csv",
+    "included": false,
+    "source": "https://huggingface.co/datasets/bones-studio/seed",
+    "reason": "BONES-SEED prohibits public redistribution and mirrors",
+    "license_url": "https://bones.studio/info/seed-license"
+  },
+  {
+    "number": 26,
+    "directory": "026__230412__dance_latino_chase_mambo_R_fast_001__A314",
+    "clip": "230412/dance_latino_chase_mambo_R_fast_001__A314.csv",
+    "included": false,
+    "source": "https://huggingface.co/datasets/bones-studio/seed",
+    "reason": "BONES-SEED prohibits public redistribution and mirrors",
+    "license_url": "https://bones.studio/info/seed-license"
+  },
+  {
+    "number": 27,
+    "directory": "027__230412__dance_latino_mambo_180_mambo_360_R_001__A313",
+    "clip": "230412/dance_latino_mambo_180_mambo_360_R_001__A313.csv",
+    "included": false,
+    "source": "https://huggingface.co/datasets/bones-studio/seed",
+    "reason": "BONES-SEED prohibits public redistribution and mirrors",
+    "license_url": "https://bones.studio/info/seed-license"
+  },
+  {
+    "number": 28,
+    "directory": "028__230412__dance_hiphop_floss_R_002__A312_M",
+    "clip": "230412/dance_hiphop_floss_R_002__A312_M.csv",
+    "included": false,
+    "source": "https://huggingface.co/datasets/bones-studio/seed",
+    "reason": "BONES-SEED prohibits public redistribution and mirrors",
+    "license_url": "https://bones.studio/info/seed-license"
+  },
+  {
+    "number": 29,
+    "directory": "029__240327__moonwalk_R_001__A533",
+    "clip": "240327/moonwalk_R_001__A533.csv",
+    "included": false,
+    "source": "https://huggingface.co/datasets/bones-studio/seed",
+    "reason": "BONES-SEED prohibits public redistribution and mirrors",
+    "license_url": "https://bones.studio/info/seed-license"
+  }
+]
