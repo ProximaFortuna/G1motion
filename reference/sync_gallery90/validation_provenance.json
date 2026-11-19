@@ -1,0 +1,29 @@
+{
+  "evaluation_date": "2026-11-18",
+  "simulator": "MuJoCo",
+  "controller": "Installed G1 SONIC release encoder/decoder and original gains",
+  "residual_enabled": false,
+  "starts_from_neutral": true,
+  "physical_assistance": false,
+  "state_resets_after_initialization": 0,
+  "policy_files": {
+    "models/model_encoder.onnx": {
+      "bytes": 50100513,
+      "sha256": "013ab0287236aa2721e13f1e936d699db982302d0de0bfcdae76d5c3245362d3"
+    },
+    "models/model_decoder.onnx": {
+      "bytes": 40900688,
+      "sha256": "c7241a123eaa36b5d64bad19540efde93cac1ad443bd4572fd12ca99898118ed"
+    },
+    "models/observation_config.yaml": {
+      "bytes": 2336,
+      "sha256": "466d05947c78af6c76388adfb86e3a2a77b2a1d921a64883ed3d085ebf58de1b"
+    }
+  },
+  "full_sequence_completed": 27,
+  "fell": 1,
+  "failed_number": 57,
+  "native_reader_validation": "All exported motion arrays loaded with the existing SONIC C++ motion-data reader",
+  "data_integrity": "All six CSV arrays per clip and metadata.txt byte-identical to the prepared library; provenance JSON paths replaced with public source identifiers",
+  "limitations": "One nominal trial per clip; simulation completion does not establish hardware safety or robust tracking"
+}

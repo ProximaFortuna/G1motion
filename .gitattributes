@@ -1,0 +1,2 @@
+# Keep the new runtime motion arrays in Git LFS; indexes remain normal Git files.
+reference/sync_gallery90/*/*.csv filter=lfs diff=lfs merge=lfs -text
