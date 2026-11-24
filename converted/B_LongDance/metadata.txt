@@ -1,7 +1,0 @@
-Metadata for: B_LongDance
-==============================
-
-Body part indexes:
-[0]
-
-Total timesteps: 5972

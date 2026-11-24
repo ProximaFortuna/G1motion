@@ -1,8 +1,0 @@
-Source: dataset/dance/J_Dance17_Shuffle/retarget/J_Dance17_Shuffle.pkl
-Source FPS: 60.0
-Output FPS: 50.0
-Output frames: 1601
-Motion duration: 32.0167 s
-Joint convention: SONIC IsaacLab 29-DOF
-Quaternion convention: wxyz
-Root data: G1 Moves retarget PKL root, not full-body FK

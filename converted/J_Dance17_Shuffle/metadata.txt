@@ -1,7 +1,0 @@
-Metadata for: J_Dance17_Shuffle
-==============================
-
-Body part indexes:
-[0]
-
-Total timesteps: 1601

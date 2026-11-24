@@ -1,7 +1,0 @@
-Metadata for: J_Dance8_WestCoast
-==============================
-
-Body part indexes:
-[0]
-
-Total timesteps: 1996
